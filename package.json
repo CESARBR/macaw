@@ -1,0 +1,30 @@
+{
+  "name": "macaw-ds",
+  "version": "0.0.1",
+  "description": "Macaw - CESAR Design System",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:cesarbr/cesar-apps/macaw/macaw.git"
+  },
+  "keywords": [
+    "front-end",
+    "design-system",
+    "css",
+    "javascript",
+    "web",
+    "mobile",
+    "ui",
+    "ui-kit",
+    "sass",
+    "framework"
+  ],
+  "author": "CESAR - Centro de Estudos e Sistemas Avançados do Recife",
+  "license": "MIT"
+}
