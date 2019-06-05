@@ -1,2 +1,2 @@
-* [Home](redme.md)
+* [Home](README.md)
 * [Typography](typography.md)
