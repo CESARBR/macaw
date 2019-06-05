@@ -1,2 +1,2 @@
-* [Home](/)
+* [Home](redme.md)
 * [Typography](typography.md)
