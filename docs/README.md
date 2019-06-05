@@ -1,3 +1,3 @@
-# Macaw
+# macaw
 
 > An awesome project.
