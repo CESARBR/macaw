@@ -1,0 +1,2 @@
+* [Home](/)
+* [Typography](typography.md)
