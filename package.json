@@ -1,18 +1,7 @@
 {
-  "name": "macaw-ds",
+  "name": "macaw",
   "version": "0.0.1",
   "description": "Macaw - CESAR Design System",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:cesarbr/cesar-apps/macaw/macaw.git"
-  },
   "keywords": [
     "front-end",
     "design-system",
@@ -23,8 +12,38 @@
     "ui",
     "ui-kit",
     "sass",
-    "framework"
+    "framework",
+    "stenciljs"
   ],
+  "directories": {
+    "doc": "docs"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/macaw/macaw.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:cesarbr/cesar-apps/macaw/macaw.git"
+  },
   "author": "CESAR - Centro de Estudos e Sistemas Avançados do Recife",
   "license": "MIT"
 }
