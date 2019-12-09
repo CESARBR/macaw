@@ -24,6 +24,36 @@ export namespace Components {
     */
     'tooltip': string;
   }
+  interface MTable {
+    /**
+    * Data Table
+    */
+    'data': [];
+    /**
+    * Table Headers
+    */
+    'dataHeaders': [];
+    /**
+    * Table Strip
+    */
+    'strip': boolean;
+  }
+  interface MTbody {
+    /**
+    * Table Body
+    */
+    'body': [];
+    /**
+    * Table Header
+    */
+    'header': [];
+  }
+  interface MThead {
+    /**
+    * Table Header
+    */
+    'header': [];
+  }
 }
 
 declare global {
@@ -34,8 +64,29 @@ declare global {
     prototype: HTMLMButtonElement;
     new (): HTMLMButtonElement;
   };
+
+  interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
+  var HTMLMTableElement: {
+    prototype: HTMLMTableElement;
+    new (): HTMLMTableElement;
+  };
+
+  interface HTMLMTbodyElement extends Components.MTbody, HTMLStencilElement {}
+  var HTMLMTbodyElement: {
+    prototype: HTMLMTbodyElement;
+    new (): HTMLMTbodyElement;
+  };
+
+  interface HTMLMTheadElement extends Components.MThead, HTMLStencilElement {}
+  var HTMLMTheadElement: {
+    prototype: HTMLMTheadElement;
+    new (): HTMLMTheadElement;
+  };
   interface HTMLElementTagNameMap {
     'm-button': HTMLMButtonElement;
+    'm-table': HTMLMTableElement;
+    'm-tbody': HTMLMTbodyElement;
+    'm-thead': HTMLMTheadElement;
   }
 }
 
@@ -50,9 +101,42 @@ declare namespace LocalJSX {
     */
     'tooltip'?: string;
   }
+  interface MTable {
+    /**
+    * Data Table
+    */
+    'data'?: [];
+    /**
+    * Table Headers
+    */
+    'dataHeaders'?: [];
+    /**
+    * Table Strip
+    */
+    'strip'?: boolean;
+  }
+  interface MTbody {
+    /**
+    * Table Body
+    */
+    'body'?: [];
+    /**
+    * Table Header
+    */
+    'header'?: [];
+  }
+  interface MThead {
+    /**
+    * Table Header
+    */
+    'header'?: [];
+  }
 
   interface IntrinsicElements {
     'm-button': MButton;
+    'm-table': MTable;
+    'm-tbody': MTbody;
+    'm-thead': MThead;
   }
 }
 
@@ -63,6 +147,9 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
+      'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
+      'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
+      'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
     }
   }
 }
