@@ -10,10 +10,39 @@
 
 </head>
 <body>
-  <h1>Macaw</h1>
-  <hr>
-  <h2>Buttons</h2>
-  <m-button title="Button title">Button</m-button>
-  <m-button title="Button title disabled" disabled>Button</m-button>
+  <style>
+    * {
+      font-family: -apple-system, -apple-system-font, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    }
+    .row {
+      padding: 5px;
+    }
+    .content-table {
+      width: 600px;
+    }
+    .light-font {
+      font-weight: 300;
+      color: #ababab;
+    }
+  </style>
+  <div class='row'>
+    <h2>Button <span class='light-font'>Primary</span></h2>
+
+    <m-button class="my-button" title="Button default">Button</m-button>
+    <m-button class="my-button--disabled" title="Button disabled" disabled>Button disabled</m-button>
+  </div>
+  <div class='row content-table'>
+    <h2>Table <span class='light-font'>Strip</span></h2>
+
+    <m-table strip='true'></m-table>
+  </div>
+  <script>
+    const myTable = document.querySelector('m-table');
+    myTable.data = [{id: '01', name: 'Pedro', job: 'Coelho' }, {id: '02', name: 'Patrick', job: 'Estrela' }];
+    myTable.dataHeaders = [{title: 'ID', key: 'id'}, {title: 'Name', key: 'name'}, {title: 'Job', key: 'job'},];
+
+    myButton.addEventListener('click', onlyClick);
+    myButtonDisabled.addEventListener('click', onlyClick);
+  </script>
 </body>
 </html>
