@@ -10,22 +10,49 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
+  interface MButton {
+    /**
+    * Disable button
+    */
+    'disabled': boolean;
+    /**
+    * Method showPrompt
+    */
+    'myTip': () => Promise<string>;
+    /**
+    * Button tooltip
+    */
+    'tooltip': string;
+  }
 }
 
 declare global {
 
 
+  interface HTMLMButtonElement extends Components.MButton, HTMLStencilElement {}
+  var HTMLMButtonElement: {
+    prototype: HTMLMButtonElement;
+    new (): HTMLMButtonElement;
+  };
   interface HTMLElementTagNameMap {
-
+    'm-button': HTMLMButtonElement;
   }
 }
 
 declare namespace LocalJSX {
-
+  interface MButton {
+    /**
+    * Disable button
+    */
+    'disabled'?: boolean;
+    /**
+    * Button tooltip
+    */
+    'tooltip'?: string;
+  }
 
   interface IntrinsicElements {
-
+    'm-button': MButton;
   }
 }
 
@@ -35,7 +62,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-
+      'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
     }
   }
 }
