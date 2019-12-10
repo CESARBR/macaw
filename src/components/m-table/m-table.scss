@@ -20,7 +20,5 @@
   }
   .m-tbody {
     display: table-row-group;
-    tr:nth-child(even) {background: $white}
-    tr:nth-child(odd) {background: $frost}
   }
 }
