@@ -1,0 +1,20 @@
+.m-footer {
+  display: flex;
+  justify-content: space-between;
+  border-radius: $borderRadius;
+  height: 50px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 9px;
+  color: $med-gray;
+
+  &.m-footer--block {
+    background-color: $frost;
+    border-radius: $borderRadius;
+  }
+
+  &.m-footer--line {
+    border-top: 1px solid $ice;
+  }
+}
