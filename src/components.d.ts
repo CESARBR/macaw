@@ -24,6 +24,12 @@ export namespace Components {
     */
     'tooltip': string;
   }
+  interface MFooter {
+    /**
+    * Footer class
+    */
+    'footerType': string;
+  }
 }
 
 declare global {
@@ -34,8 +40,15 @@ declare global {
     prototype: HTMLMButtonElement;
     new (): HTMLMButtonElement;
   };
+
+  interface HTMLMFooterElement extends Components.MFooter, HTMLStencilElement {}
+  var HTMLMFooterElement: {
+    prototype: HTMLMFooterElement;
+    new (): HTMLMFooterElement;
+  };
   interface HTMLElementTagNameMap {
     'm-button': HTMLMButtonElement;
+    'm-footer': HTMLMFooterElement;
   }
 }
 
@@ -50,9 +63,16 @@ declare namespace LocalJSX {
     */
     'tooltip'?: string;
   }
+  interface MFooter {
+    /**
+    * Footer class
+    */
+    'footerType'?: string;
+  }
 
   interface IntrinsicElements {
     'm-button': MButton;
+    'm-footer': MFooter;
   }
 }
 
@@ -63,6 +83,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
+      'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
     }
   }
 }
