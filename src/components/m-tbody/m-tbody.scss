@@ -1,13 +1,15 @@
-.m-tbody__row:nth-child(even) {
-  background: $white
-}
+.m-tbody {
+  &__row:nth-child(even) {
+    background: $white
+  }
 
-.m-tbody__row:nth-child(odd) {
-  background: $frost
-}
+  &__row:nth-child(odd) {
+    background: $frost
+  }
 
-.m-tbody__cell {
-  line-height: 24px;
-  font-weight: 400;
-  padding: 10px 30px;
+  &__cell {
+    line-height: 24px;
+    font-weight: 400;
+    padding: 10px 30px;
+  }
 }
