@@ -1,0 +1,24 @@
+.m-table {
+  border-bottom: 1px solid $lightest-gray;
+  border-radius: 2px;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  .m-thead {
+    text-align: left;
+    background-color: $white;
+    font-weight: 600;
+    padding: 0;
+    vertical-align: bottom;
+    &__cell {
+      line-height: 24px;
+      padding: 10px 28px;
+    }
+  }
+  .m-thead {
+    display: table-header-group;
+  }
+  .m-tbody {
+    display: table-row-group;
+  }
+}
