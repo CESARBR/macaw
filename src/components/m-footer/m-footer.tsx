@@ -16,7 +16,9 @@ export class Footer {
     const time = new Date().getFullYear();
 
     return (
-    <footer class={'m-footer ' + (this.footerType === 'block' ? 'm-footer--block' : this.footerType === 'line' ? 'm-footer--line' : '')}><small class="footer__copyright">© { time } CESAR. All rights reserved.</small><slot></slot></footer>
+    <footer class={'m-footer ' + (this.footerType === 'block' ? 'm-footer--block' : this.footerType === 'line' ? 'm-footer--line' : '')}>
+        <small class="footer__copyright">© { time } CESAR. All rights reserved.</small><slot/>
+      </footer>
     );
   }
 }
