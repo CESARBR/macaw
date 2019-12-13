@@ -1,0 +1,15 @@
+.m-tbody {
+  &__row:nth-child(even) {
+    background: $white
+  }
+
+  &__row:nth-child(odd) {
+    background: $frost
+  }
+
+  &__cell {
+    line-height: 24px;
+    font-weight: 400;
+    padding: 10px 30px;
+  }
+}
