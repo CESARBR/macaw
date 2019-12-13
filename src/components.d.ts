@@ -24,6 +24,36 @@ export namespace Components {
     */
     'tooltip': string;
   }
+  interface MTable {
+    /**
+    * Data Table
+    */
+    'data': [];
+    /**
+    * Table Headers
+    */
+    'dataHeaders': [];
+    /**
+    * Table Strip
+    */
+    'strip': boolean;
+  }
+  interface MTbody {
+    /**
+    * Table Body
+    */
+    'body': [];
+    /**
+    * Table Header
+    */
+    'header': [];
+  }
+  interface MThead {
+    /**
+    * Table Header
+    */
+    'header': [];
+  }
   interface MFooter {
     /**
     * Footer class
@@ -33,12 +63,28 @@ export namespace Components {
 }
 
 declare global {
-
-
   interface HTMLMButtonElement extends Components.MButton, HTMLStencilElement {}
   var HTMLMButtonElement: {
     prototype: HTMLMButtonElement;
     new (): HTMLMButtonElement;
+  };
+
+  interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
+  var HTMLMTableElement: {
+    prototype: HTMLMTableElement;
+    new (): HTMLMTableElement;
+  };
+
+  interface HTMLMTbodyElement extends Components.MTbody, HTMLStencilElement {}
+  var HTMLMTbodyElement: {
+    prototype: HTMLMTbodyElement;
+    new (): HTMLMTbodyElement;
+  };
+
+  interface HTMLMTheadElement extends Components.MThead, HTMLStencilElement {}
+  var HTMLMTheadElement: {
+    prototype: HTMLMTheadElement;
+    new (): HTMLMTheadElement;
   };
 
   interface HTMLMFooterElement extends Components.MFooter, HTMLStencilElement {}
@@ -46,8 +92,12 @@ declare global {
     prototype: HTMLMFooterElement;
     new (): HTMLMFooterElement;
   };
+
   interface HTMLElementTagNameMap {
     'm-button': HTMLMButtonElement;
+    'm-table': HTMLMTableElement;
+    'm-tbody': HTMLMTbodyElement;
+    'm-thead': HTMLMTheadElement;
     'm-footer': HTMLMFooterElement;
   }
 }
@@ -63,6 +113,37 @@ declare namespace LocalJSX {
     */
     'tooltip'?: string;
   }
+  
+  interface MTable {
+    /**
+    * Data Table
+    */
+    'data'?: [];
+    /**
+    * Table Headers
+    */
+    'dataHeaders'?: [];
+    /**
+    * Table Strip
+    */
+    'strip'?: boolean;
+  }
+  interface MTbody {
+    /**
+    * Table Body
+    */
+    'body'?: [];
+    /**
+    * Table Header
+    */
+    'header'?: [];
+  }
+  interface MThead {
+    /**
+    * Table Header
+    */
+    'header'?: [];
+  }
   interface MFooter {
     /**
     * Footer class
@@ -72,6 +153,9 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'm-button': MButton;
+    'm-table': MTable;
+    'm-tbody': MTbody;
+    'm-thead': MThead;
     'm-footer': MFooter;
   }
 }
@@ -83,6 +167,9 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
+      'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
+      'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
+      'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
     }
   }
