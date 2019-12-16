@@ -8,24 +8,11 @@ This is a magic table or not ;)
 
 ## Properties
 
-| Property   | Attribute  | Description    | Type      | Default     |
-| ---------- | ---------- | -------------- | --------- | ----------- |
-| `disabled` | `disabled` | Disable button | `boolean` | `false`     |
-| `tooltip`  | `title`    | Button tooltip | `string`  | `undefined` |
-
-
-## Methods
-
-### `myTip() => Promise<string>`
-
-Method showPrompt
-
-#### Returns
-
-Type: `Promise<string>`
-
-
-
+| Property     | Attribute  | Description       | Type      | Default     |
+| ------------ | ---------- | ----------------- | --------- | ----------- |
+|    `data`    |            | Table body data   | `object`  | `undefined` |
+| `dataHeaders`|            | Table header data | `object`  | `undefined` |
+|    `strip`   |   `class`  | Table style       | `boolean` | `false`     |
 
 ----------------------------------------------
 
