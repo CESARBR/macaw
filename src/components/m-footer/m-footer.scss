@@ -1,20 +1,18 @@
-.m-footer {
+.m-footer--block,
+.m-footer--line {
   display: flex;
   justify-content: space-between;
   border-radius: $borderRadius;
-  height: 50px;
   padding: 20px;
-  box-sizing: border-box;
-  font-size: 12px;
+  font-size: $font-sm;
   line-height: 9px;
   color: $med-gray;
+}
 
-  &.m-footer--block {
-    background-color: $frost;
-    border-radius: $borderRadius;
-  }
+.m-footer--block {
+  background-color: $frost;
+}
 
-  &.m-footer--line {
-    border-top: 1px solid $ice;
-  }
+.m-footer--line {
+  border-top: 1px solid $ice;
 }
