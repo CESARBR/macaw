@@ -8,17 +8,17 @@ import { Component, Prop, h } from '@stencil/core';
 export class Avatar {
 
   /**
-   * Valid image URL or user name
+   * Image URL or user name.
    */
   @Prop({ attribute: 'data-source' }) dataSource: string;
 
   /**
-   * Alternative description
+   * Alternative description.
    */
   @Prop({ attribute: 'data-alt' }) dataAlt: string;
 
   /**
-   * Check if a given URL is valid.
+   * Check if a given URL is valid
    * @param {String} str
    * @returns {Boolean}
    */
@@ -33,7 +33,7 @@ export class Avatar {
   }
 
   /**
-   * Get initials from first and last names.
+   * Get initials of first and last names from a given string
    * @param {String} str
    * @returns {String}
    */

@@ -12,11 +12,11 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface MAvatar {
     /**
-    * Alternative description
+    * Alternative description.
     */
     'dataAlt': string;
     /**
-    * Valid image URL or user name
+    * Image URL or user name.
     */
     'dataSource': string;
   }
@@ -123,11 +123,11 @@ declare global {
 declare namespace LocalJSX {
   interface MAvatar {
     /**
-    * Alternative description
+    * Alternative description.
     */
     'dataAlt'?: string;
     /**
-    * Valid image URL or user name
+    * Image URL or user name.
     */
     'dataSource'?: string;
   }

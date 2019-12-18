@@ -8,21 +8,29 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property   | Attribute  | Description    | Type      | Default     |
-| ---------- | ---------- | -------------- | --------- | ----------- |
-| `disabled` | `disabled` | Disable button | `boolean` | `false`     |
-| `tooltip`  | `title`    | Button tooltip | `string`  | `undefined` |
+| Property     | Attribute  | Description             | Type     | Default     |
+| ------------ | ---------- | ----------------------- | -------- | ----------- |
+| `dataSource` | `src`      | Image URL or user name  | `string` | `undefined` |
+| `dataAlt`    | `alt`      | Alternative description | `string` | `undefined` |
 
 
 ## Methods
 
-### `myTip() => Promise<string>`
+### `validURL() => Boolean`
 
-Method showPrompt
+Check if a given URL is valid
 
 #### Returns
 
-Type: `Promise<string>`
+Type: `Boolean`
+
+### `validURL() => String`
+
+Get initials of first and last names from a given string
+
+#### Returns
+
+Type: `String`
 
 
 
