@@ -10,6 +10,16 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface MAvatar {
+    /**
+    * Alternative description
+    */
+    'dataAlt': string;
+    /**
+    * Valid image URL or user name
+    */
+    'dataSource': string;
+  }
   interface MButton {
     /**
     * Disable button
@@ -29,16 +39,6 @@ export namespace Components {
     * Footer class
     */
     'footerType': string;
-  }
-  interface MIcon {
-    /**
-    * The icon name
-    */
-    'name': string;
-    /**
-    * Icon tooltip
-    */
-    'tooltip': string;
   }
   interface MTable {
     /**
@@ -75,6 +75,12 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLMAvatarElement extends Components.MAvatar, HTMLStencilElement {}
+  var HTMLMAvatarElement: {
+    prototype: HTMLMAvatarElement;
+    new (): HTMLMAvatarElement;
+  };
+
   interface HTMLMButtonElement extends Components.MButton, HTMLStencilElement {}
   var HTMLMButtonElement: {
     prototype: HTMLMButtonElement;
@@ -85,12 +91,6 @@ declare global {
   var HTMLMFooterElement: {
     prototype: HTMLMFooterElement;
     new (): HTMLMFooterElement;
-  };
-
-  interface HTMLMIconElement extends Components.MIcon, HTMLStencilElement {}
-  var HTMLMIconElement: {
-    prototype: HTMLMIconElement;
-    new (): HTMLMIconElement;
   };
 
   interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
@@ -111,9 +111,9 @@ declare global {
     new (): HTMLMTheadElement;
   };
   interface HTMLElementTagNameMap {
+    'm-avatar': HTMLMAvatarElement;
     'm-button': HTMLMButtonElement;
     'm-footer': HTMLMFooterElement;
-    'm-icon': HTMLMIconElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
     'm-thead': HTMLMTheadElement;
@@ -121,6 +121,16 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface MAvatar {
+    /**
+    * Alternative description
+    */
+    'dataAlt'?: string;
+    /**
+    * Valid image URL or user name
+    */
+    'dataSource'?: string;
+  }
   interface MButton {
     /**
     * Disable button
@@ -136,16 +146,6 @@ declare namespace LocalJSX {
     * Footer class
     */
     'footerType'?: string;
-  }
-  interface MIcon {
-    /**
-    * The icon name
-    */
-    'name'?: string;
-    /**
-    * Icon tooltip
-    */
-    'tooltip'?: string;
   }
   interface MTable {
     /**
@@ -179,9 +179,9 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'm-avatar': MAvatar;
     'm-button': MButton;
     'm-footer': MFooter;
-    'm-icon': MIcon;
     'm-table': MTable;
     'm-tbody': MTbody;
     'm-thead': MThead;
@@ -194,9 +194,9 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'm-avatar': LocalJSX.MAvatar & JSXBase.HTMLAttributes<HTMLMAvatarElement>;
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
-      'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
       'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
