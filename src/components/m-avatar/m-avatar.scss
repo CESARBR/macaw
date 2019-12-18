@@ -1,16 +1,25 @@
-.m-avatar__image,
-.m-avatar__initials {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  vertical-align: middle;
-}
-
-.m-avatar__initials {
-  display: inline-block;
-  background: $orange;
-  color: $white;
-  font-size: 14px;
-  line-height: 2.2;
-  text-align: center;
+.m-avatar {
+  &__image,
+  &__initials {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+  }
+  
+  &__initials {
+    display: inline-block;
+    background: $orange;
+    color: $white;
+    font-size: 14px;
+    line-height: 2.2;
+    text-align: center;
+  
+    &--error {
+      background: $lightest-gray;
+      color: $black;
+      font-size: 11px;
+      line-height: 2.8;
+    }
+  }
 }
