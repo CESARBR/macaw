@@ -1,5 +1,4 @@
-.m-footer--block,
-.m-footer--line {
+.m-footer {
   display: flex;
   justify-content: space-between;
   border-radius: $borderRadius;
@@ -7,12 +6,12 @@
   font-size: $font-sm;
   line-height: 9px;
   color: $med-gray;
-}
 
-.m-footer--block {
-  background-color: $frost;
-}
+  &--block {
+    background-color: $frost;
+  }
 
-.m-footer--line {
-  border-top: 1px solid $ice;
+  &--line {
+    border-top: 1px solid $ice;
+  }
 }
