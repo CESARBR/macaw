@@ -24,6 +24,12 @@ export namespace Components {
     */
     'tooltip': string;
   }
+  interface MFooter {
+    /**
+    * Footer class
+    */
+    'footerType': string;
+  }
   interface MTable {
     /**
     * Data Table
@@ -65,6 +71,12 @@ declare global {
     new (): HTMLMButtonElement;
   };
 
+  interface HTMLMFooterElement extends Components.MFooter, HTMLStencilElement {}
+  var HTMLMFooterElement: {
+    prototype: HTMLMFooterElement;
+    new (): HTMLMFooterElement;
+  };
+
   interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
   var HTMLMTableElement: {
     prototype: HTMLMTableElement;
@@ -84,6 +96,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'm-button': HTMLMButtonElement;
+    'm-footer': HTMLMFooterElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
     'm-thead': HTMLMTheadElement;
@@ -100,6 +113,12 @@ declare namespace LocalJSX {
     * Button tooltip
     */
     'tooltip'?: string;
+  }
+  interface MFooter {
+    /**
+    * Footer class
+    */
+    'footerType'?: string;
   }
   interface MTable {
     /**
@@ -134,6 +153,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'm-button': MButton;
+    'm-footer': MFooter;
     'm-table': MTable;
     'm-tbody': MTbody;
     'm-thead': MThead;
@@ -147,6 +167,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
+      'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
       'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
