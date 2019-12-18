@@ -48,15 +48,20 @@ export class Avatar {
 }
 
   render() {
-    if(this.validURL(this.dataSource) && this.dataSource.match(/\.(jpeg|jpg|gif|png)$/) !== null) {
+    if(this.validURL(this.dataSource)) {
+      if(this.dataSource.match(/\.(jpeg|jpg|gif|png)$/) !== null) {
         return (
-          <img class="m-avatar__image" src={this.dataSource} alt={this.dataAlt} />
+          <img class="m-avatar m-avatar__image" src={this.dataSource} alt={this.dataAlt} />
         )
+      } else {
+        return (
+          <span class="m-avatar m-avatar__initials m-avatar__initials--error">Error</span>
+        )
+      }
+        
     } else {
-      /* let initials = this.dataSource.match(/\b\w/g) || [];
-      initials = ((initials.shift() || '') + (initials.pop() || '')).toUpperCase(); */
       return (
-        <span class="m-avatar__initials">{this.getInitials(this.dataSource)}</span>
+        <span class="m-avatar m-avatar__initials">{this.getInitials(this.dataSource)}</span>
       )
     }
   }
