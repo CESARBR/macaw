@@ -57,8 +57,7 @@ export class Avatar {
         return (
           console.error("URL doesn't target to an image file.")
         )
-      }
-        
+      } 
     } else {
       return (
         <span class="m-avatar m-avatar__initials">{this.getInitials(this.dataSource)}</span>
