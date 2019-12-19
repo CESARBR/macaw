@@ -55,7 +55,7 @@ export class Avatar {
         )
       } else {
         return (
-          <span class="m-avatar m-avatar__initials m-avatar__initials--error">Error</span>
+          console.error("URL doesn't target to an image file.")
         )
       }
         
