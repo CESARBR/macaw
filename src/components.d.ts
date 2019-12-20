@@ -14,7 +14,7 @@ export namespace Components {
     /**
     * Alternative description.
     */
-    'dataAlt': string;
+    'altDesc': string;
     /**
     * Image URL or user name.
     */
@@ -125,7 +125,7 @@ declare namespace LocalJSX {
     /**
     * Alternative description.
     */
-    'dataAlt'?: string;
+    'altDesc'?: string;
     /**
     * Image URL or user name.
     */

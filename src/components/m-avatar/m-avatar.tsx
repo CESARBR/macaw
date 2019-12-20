@@ -15,10 +15,10 @@ export class Avatar {
   /**
    * Alternative description.
    */
-  @Prop({ attribute: 'data-alt' }) dataAlt: string;
+  @Prop({ attribute: 'alt' }) altDesc: string;
 
   /**
-   * Check if a given URL is valid
+   * Check if a given URL is valid.
    * @param {String} str
    * @returns {Boolean}
    */
@@ -33,7 +33,7 @@ export class Avatar {
   }
 
   /**
-   * Get initials of first and last names from a given string
+   * Get initials of first and last names from a given string.
    * @param {String} str
    * @returns {String}
    */
@@ -51,7 +51,7 @@ export class Avatar {
     if(this.validURL(this.dataSource)) {
       if(this.dataSource.match(/\.(jpeg|jpg|gif|png)$/) !== null) {
         return (
-          <img class="m-avatar m-avatar__image" src={this.dataSource} alt={this.dataAlt} />
+          <img class="m-avatar m-avatar__image" src={this.dataSource} alt={this.altDesc} />
         )
       } else {
         return (
