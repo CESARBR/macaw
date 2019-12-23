@@ -12,35 +12,112 @@
 <body>
   <style>
   /* Specific for documentation page layout */
+    /* General */
+    .light-font {
+      font-weight: 300;
+      color: #ababab;
+    }
     * {
       font-family: -apple-system, -apple-system-font, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     }
     .row {
       padding: 5px;
     }
+    /* Table */
     .content-table {
       width: 600px;
     }
-    .light-font {
-      font-weight: 300;
-      color: #ababab;
+    /* Icons */
+    .content-icons svg {
+      height: 30px;
     }
+    .content-icons__group > span:hover {
+      background-color: #F5F5F5;
+      transition: background-color .2s;
+    }
+    .content-icons__group > span:not(:last-child) {
+      margin-right: 10px;
+    }
+    .content-icons__group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .content-icons__group > span {
+      align-items: center;
+      background-color: white;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      transition: background-color .2s;
+    }
+    
   </style>
-  <div class='row'>
+  <section class='row'>
     <h2>Button <span class='light-font'>Primary</span></h2>
     <m-button class="my-button" title="Button default">Button</m-button>
     <m-button class="my-button--disabled" title="Button disabled" disabled>Button disabled</m-button>
-  </div>
-  <div class='row content-table'>
+  </section>
+
+  <section class='row content-table'>
     <h2>Table <span class='light-font'>Strip</span></h2>
     <m-table strip='true'></m-table>
-  </div>
-  <div class='row'>
+  </section>
+
+  <section class='row content-icons'>
+    <h2>Icons <span class='light-font'>Leaked</span></h2>
+    <div class="content-icons__group">
+      <span><m-icon name="arrows-top-bottom" title="Expand screen"></m-icon><span>arrows-top-bottom</span></span>
+      <span><m-icon name="bell"></m-icon><span>bell</span></span>
+      <span><m-icon name="calendar"></m-icon><span>calendar</span></span>
+      <span><m-icon name="camera"></m-icon><span>camera</span></span>
+      <span><m-icon name="check-rounded"></m-icon><span>check-rounded</span></span>
+      <span><m-icon name="check"></m-icon><span>check</span></span>
+      <span><m-icon name="chevron-bottom"></m-icon><span>chevron-bottom</span></span>
+      <span><m-icon name="chevron-left"></m-icon><span>chevron-left</span></span>
+      <span><m-icon name="chevron-right"></m-icon><span>chevron-right</span></span>
+      <span><m-icon name="chevron-top"></m-icon><span>chevron-top</span></span>
+      <span><m-icon name="clip"></m-icon><span>clip</span></span>
+      <span><m-icon name="clock"></m-icon><span>clock</span></span>
+      <span><m-icon name="envelope"></m-icon><span>envelope</span></span>
+      <span><m-icon name="exclamation-mark"></m-icon><span>exclamation-mark</span></span>
+      <span><m-icon name="magnifier"></m-icon><span>magnifier</span></span>
+      <span><m-icon name="minus"></m-icon><span>minus</span></span>
+      <span><m-icon name="pencil"></m-icon><span>pencil</span></span>
+      <span><m-icon name="plus"></m-icon><span>plus</span></span>
+      <span><m-icon name="question-mark"></m-icon><span>question-mark</span></span>
+      <span><m-icon name="sheet"></m-icon><span>sheet</span></span>
+      <span><m-icon name="shopping-cart"></m-icon><span>shopping-cart</span></span>
+      <span><m-icon name="user"></m-icon><span>user</span></span>
+      <span><m-icon name="x-rounded"></m-icon><span>x-rounded</span></span>
+      <span><m-icon name="x-large"></m-icon><span>x-large</span></span>
+    </div>
+
+    <h2>Icons <span class='light-font'>Filled</span></h2>
+    <div class="content-icons__group">
+      <span><m-icon name="calendar-filled"></m-icon><span>calendar-filled</span></span>
+      <span><m-icon name="camera-filled"></m-icon><span>camera-filled</span></span>
+      <span><m-icon name="check-rounded-filled"></m-icon><span>check-rounded-filled</span></span>
+      <span><m-icon name="clock-filled"></m-icon><span>clock-filled</span></span>
+      <span><m-icon name="envelope-filled"></m-icon><span>envelope-filled</span></span>
+      <span><m-icon name="exclamation-mark-filled"></m-icon><span>exclamation-mark-filled</span></span>
+      <span><m-icon name="pencil-filled"></m-icon><span>pencil-filled</span></span>
+      <span><m-icon name="question-mark-filled"></m-icon><span>question-mark-filled</span></span>
+      <span><m-icon name="sheet-filled"></m-icon><span>sheet-filled</span></span>
+      <span><m-icon name="shopping-cart-filled"></m-icon><span>shopping-cart-filled</span></span>
+      <span><m-icon name="user-filled"></m-icon><span>user-filled</span></span>
+      <span><m-icon name="x-rounded-filled"></m-icon><span>x-rounded-filled</span></span>
+    </div>
+  </section>
+
+<!-- </div> -->
+  <section class='row'>
     <h2>Footer <span class='light-font'>Block</span></h2>
     <m-footer type="block">Lorem</m-footer>
     <h2>Footer <span class='light-font'>Line</span></h2>
     <m-footer type="line">Lorem</m-footer>
-  </div>
+  </section>
+
   <script>
     const myTable = document.querySelector('m-table');
     myTable.data = [{id: '01', name: 'Pedro', job: 'Coelho' }, {id: '02', name: 'Patrick', job: 'Estrela' }];

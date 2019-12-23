@@ -30,6 +30,16 @@ export namespace Components {
     */
     'footerType': string;
   }
+  interface MIcon {
+    /**
+    * The icon name
+    */
+    'name': string;
+    /**
+    * Icon tooltip
+    */
+    'tooltip': string;
+  }
   interface MTable {
     /**
     * Data Table
@@ -77,6 +87,12 @@ declare global {
     new (): HTMLMFooterElement;
   };
 
+  interface HTMLMIconElement extends Components.MIcon, HTMLStencilElement {}
+  var HTMLMIconElement: {
+    prototype: HTMLMIconElement;
+    new (): HTMLMIconElement;
+  };
+
   interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
   var HTMLMTableElement: {
     prototype: HTMLMTableElement;
@@ -97,6 +113,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'm-button': HTMLMButtonElement;
     'm-footer': HTMLMFooterElement;
+    'm-icon': HTMLMIconElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
     'm-thead': HTMLMTheadElement;
@@ -119,6 +136,16 @@ declare namespace LocalJSX {
     * Footer class
     */
     'footerType'?: string;
+  }
+  interface MIcon {
+    /**
+    * The icon name
+    */
+    'name'?: string;
+    /**
+    * Icon tooltip
+    */
+    'tooltip'?: string;
   }
   interface MTable {
     /**
@@ -154,6 +181,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'm-button': MButton;
     'm-footer': MFooter;
+    'm-icon': MIcon;
     'm-table': MTable;
     'm-tbody': MTbody;
     'm-thead': MThead;
@@ -168,6 +196,7 @@ declare module "@stencil/core" {
     interface IntrinsicElements {
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
+      'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
       'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
