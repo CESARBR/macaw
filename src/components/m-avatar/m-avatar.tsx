@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
+import { validURL, validImage } from '../../utils/utils';
 
 @Component({
   tag: 'm-avatar',
@@ -7,10 +8,10 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class Avatar {
 
-  /**
+  /** 
    * Image URL or user name.
    */
-  @Prop({ attribute: 'data-source' }) dataSource: string;
+  @Prop() source: string;
 
   /**
    * Alternative description.
@@ -18,26 +19,9 @@ export class Avatar {
   @Prop({ attribute: 'alt' }) altDesc: string;
 
   /**
-   * Check if a given URL is valid.
-   * @param {String} str
-   * @returns {Boolean}
-   */
-  validURL(str) {
-    let pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-      '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    return !!pattern.test(str);
-  }
-
-  /**
    * Get initials of first and last names from a given string.
-   * @param {String} str
-   * @returns {String}
    */
-  getInitials (string) {
+  getInitials (string: string): string {
     let names = string.split(' '),
         initials = names[0].substring(0, 1).toUpperCase();
     
@@ -48,10 +32,10 @@ export class Avatar {
 }
 
   render() {
-    if(this.validURL(this.dataSource)) {
-      if(this.dataSource.match(/\.(jpeg|jpg|gif|png)$/) !== null) {
+    if(validURL(this.source)) {
+      if(this.source.match(validImage) !== null) {
         return (
-          <img class="m-avatar m-avatar__image" src={this.dataSource} alt={this.altDesc} />
+          <img class="m-avatar m-avatar__image" src={this.source} alt={this.altDesc} />
         )
       } else {
         return (
@@ -60,7 +44,7 @@ export class Avatar {
       } 
     } else {
       return (
-        <span class="m-avatar m-avatar__initials">{this.getInitials(this.dataSource)}</span>
+        <span class="m-avatar m-avatar__initials">{this.getInitials(this.source)}</span>
       )
     }
   }
