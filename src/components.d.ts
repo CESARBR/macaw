@@ -18,7 +18,7 @@ export namespace Components {
     /**
     * Image URL or user name.
     */
-    'dataSource': string;
+    'source': string;
   }
   interface MButton {
     /**
@@ -39,6 +39,16 @@ export namespace Components {
     * Footer class
     */
     'footerType': string;
+  }
+  interface MIcon {
+    /**
+    * The icon name
+    */
+    'name': string;
+    /**
+    * Icon tooltip
+    */
+    'tooltip': string;
   }
   interface MTable {
     /**
@@ -93,6 +103,12 @@ declare global {
     new (): HTMLMFooterElement;
   };
 
+  interface HTMLMIconElement extends Components.MIcon, HTMLStencilElement {}
+  var HTMLMIconElement: {
+    prototype: HTMLMIconElement;
+    new (): HTMLMIconElement;
+  };
+
   interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
   var HTMLMTableElement: {
     prototype: HTMLMTableElement;
@@ -114,6 +130,7 @@ declare global {
     'm-avatar': HTMLMAvatarElement;
     'm-button': HTMLMButtonElement;
     'm-footer': HTMLMFooterElement;
+    'm-icon': HTMLMIconElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
     'm-thead': HTMLMTheadElement;
@@ -129,7 +146,7 @@ declare namespace LocalJSX {
     /**
     * Image URL or user name.
     */
-    'dataSource'?: string;
+    'source'?: string;
   }
   interface MButton {
     /**
@@ -146,6 +163,16 @@ declare namespace LocalJSX {
     * Footer class
     */
     'footerType'?: string;
+  }
+  interface MIcon {
+    /**
+    * The icon name
+    */
+    'name'?: string;
+    /**
+    * Icon tooltip
+    */
+    'tooltip'?: string;
   }
   interface MTable {
     /**
@@ -182,6 +209,7 @@ declare namespace LocalJSX {
     'm-avatar': MAvatar;
     'm-button': MButton;
     'm-footer': MFooter;
+    'm-icon': MIcon;
     'm-table': MTable;
     'm-tbody': MTbody;
     'm-thead': MThead;
@@ -197,6 +225,7 @@ declare module "@stencil/core" {
       'm-avatar': LocalJSX.MAvatar & JSXBase.HTMLAttributes<HTMLMAvatarElement>;
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
+      'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
       'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
