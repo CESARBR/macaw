@@ -1,0 +1,27 @@
+.m-header {
+  align-items: center;
+  background-color: $frost;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  &__brand-name {
+    margin: 0 30px 0 10px;
+  }
+
+  &__left,
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__avatar-name {
+    margin-left: 10px;
+  }
+
+  &__avatar-image {
+    margin-left: 30px;
+  }
+}
