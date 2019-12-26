@@ -10,6 +10,16 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface MAvatar {
+    /**
+    * Alternative description.
+    */
+    'altDesc': string;
+    /**
+    * Image URL or user name.
+    */
+    'source': string;
+  }
   interface MButton {
     /**
     * Disable button
@@ -75,6 +85,12 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLMAvatarElement extends Components.MAvatar, HTMLStencilElement {}
+  var HTMLMAvatarElement: {
+    prototype: HTMLMAvatarElement;
+    new (): HTMLMAvatarElement;
+  };
+
   interface HTMLMButtonElement extends Components.MButton, HTMLStencilElement {}
   var HTMLMButtonElement: {
     prototype: HTMLMButtonElement;
@@ -111,6 +127,7 @@ declare global {
     new (): HTMLMTheadElement;
   };
   interface HTMLElementTagNameMap {
+    'm-avatar': HTMLMAvatarElement;
     'm-button': HTMLMButtonElement;
     'm-footer': HTMLMFooterElement;
     'm-icon': HTMLMIconElement;
@@ -121,6 +138,16 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface MAvatar {
+    /**
+    * Alternative description.
+    */
+    'altDesc'?: string;
+    /**
+    * Image URL or user name.
+    */
+    'source'?: string;
+  }
   interface MButton {
     /**
     * Disable button
@@ -179,6 +206,7 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'm-avatar': MAvatar;
     'm-button': MButton;
     'm-footer': MFooter;
     'm-icon': MIcon;
@@ -194,6 +222,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'm-avatar': LocalJSX.MAvatar & JSXBase.HTMLAttributes<HTMLMAvatarElement>;
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
       'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
