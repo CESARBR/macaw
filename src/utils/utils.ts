@@ -7,7 +7,7 @@ export function format(first: string, middle: string, last: string): string {
   );
 }
 
-export const validImage = /\.(jpeg|jpg|gif|png)$/;
+export const imageExtensions = /\.(jpeg|jpg|gif|png)$/;
 
 /**
  * Check if a given URL is valid.

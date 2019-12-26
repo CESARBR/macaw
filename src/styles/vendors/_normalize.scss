@@ -1,7 +1,18 @@
+@import "../theme/_cesar.scss";
+@import "../base/_typography.scss";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
+
+  * {
+  font-family: -apple-system, -apple-system-font, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+small {
+  font-size: $font-sm;
+}
 
 /**
  * 1. Correct the line height in all browsers.
@@ -22,6 +33,8 @@
 
 body {
   margin: 0;
+  font-size: $base-font-size;
+  color: $gray;
 }
 
 /**
