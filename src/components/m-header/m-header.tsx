@@ -1,5 +1,4 @@
 import { Component, h, Prop } from '@stencil/core';
-// import { validURL, imageExtensions } from '../../utils/utils';
 
 @Component({
   tag: 'm-header',
