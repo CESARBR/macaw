@@ -16,8 +16,6 @@ export class MTbody {
    */
   @Prop() header: [];
 
-
-
   render() {
     return (
       <Host>

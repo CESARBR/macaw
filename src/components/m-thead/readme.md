@@ -8,24 +8,9 @@ This is a magic thead or not ;)
 
 ## Properties
 
-| Property   | Attribute  | Description    | Type      | Default     |
-| ---------- | ---------- | -------------- | --------- | ----------- |
-| `disabled` | `disabled` | Disable button | `boolean` | `false`     |
-| `tooltip`  | `title`    | Button tooltip | `string`  | `undefined` |
-
-
-## Methods
-
-### `myTip() => Promise<string>`
-
-Method showPrompt
-
-#### Returns
-
-Type: `Promise<string>`
-
-
-
+| Property   | Description        | Type    | Default     |
+| ---------- | ------------------ | ------- | ----------- |
+| `header`   | Table header cells | `array` | `undefined` |
 
 ----------------------------------------------
 

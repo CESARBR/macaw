@@ -17,9 +17,6 @@
       font-weight: 300;
       color: #ababab;
     }
-    * {
-      font-family: -apple-system, -apple-system-font, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    }
     .row {
       padding: 5px;
     }
@@ -51,8 +48,40 @@
       padding: 20px;
       transition: background-color .2s;
     }
+    /* Header */
+    .content-header__logo svg {
+      height: 20px;
+      vertical-align: middle;
+      width: auto;
+    }
     
   </style>
+  <section class="row content-header">
+    <h2>Header</h2>
+    <m-header brand-name="My Brand" avatar-source="https://cms.qz.com/wp-content/uploads/2018/12/earring2.png" avatar-name="Regina Phalange">
+      <span slot="brand-logo" class="content-header__logo">
+        <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 289 116.318" enable-background="new 0 0 289 116.318" xml:space="preserve">
+          <g id="logo-laranja_1_">
+            <g>
+              <path fill="#F07E2A" d="M144.5,116.318C64.822,116.318,0,89.963,0,57.568c0-13.666,11.725-26.957,33.013-37.426
+                C53.891,9.875,82.993,2.738,114.958,0.046L115.5,0v4.104l-0.436,0.056c-33.477,4.346-55.97,15.662-55.97,28.158
+                c0,16.542,38.312,30,85.405,30s85.405-13.458,85.405-30c0-12.41-22.292-23.698-55.471-28.089L174,4.172V0.043l0.543,0.047
+                c31.847,2.73,60.826,9.879,81.602,20.131C277.332,30.676,289,43.939,289,57.568C289,89.963,224.178,116.318,144.5,116.318z"/>
+            </g>
+            <g>
+              <path fill="#F07E2A" d="M144.5,50.818c-33.636,0-61-9.935-61-22.146c0-10.64,19.973-19.559,48.568-21.689l0.537-0.04v3.144
+                l-0.442,0.051c-14.779,1.697-23.255,5.033-23.255,9.152c0,5.873,16.299,10.834,35.592,10.834s35.592-4.961,35.592-10.834
+                c0-4.085-8.4-7.411-23.045-9.126l-0.442-0.052V6.958l0.538,0.041C185.615,9.158,205.5,18.07,205.5,28.672
+                C205.5,40.884,178.136,50.818,144.5,50.818z"/>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <span slot="header-left"> dados complementares à esquerda</span>
+      <span slot="header-right"> dados complementares à direita</span>
+    </m-header>
+  </section>
+
   <section class='row'>
     <h2>Button <span class='light-font'>Primary</span></h2>
     <m-button class="my-button" title="Button default">Button</m-button>
