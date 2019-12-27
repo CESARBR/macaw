@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { validURL, validImage } from '../../utils/utils';
+import { validURL, imageExtensions } from '../../utils/utils';
 
 @Component({
   tag: 'm-avatar',
@@ -33,7 +33,7 @@ export class Avatar {
 
   render() {
     if(validURL(this.source)) {
-      if(this.source.match(validImage) !== null) {
+      if(this.source.match(imageExtensions) !== null) {
         return (
           <img class="m-avatar m-avatar__image" src={this.source} alt={this.altDesc} />
         )

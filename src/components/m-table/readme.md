@@ -8,11 +8,11 @@ This is a magic table or not ;)
 
 ## Properties
 
-| Property     | Attribute  | Description       | Type      | Default     |
-| ------------ | ---------- | ----------------- | --------- | ----------- |
-|    `data`    |            | Table body data   | `object`  | `undefined` |
-| `dataHeaders`|            | Table header data | `object`  | `undefined` |
-|    `strip`   |   `class`  | Table style       | `boolean` | `false`     |
+| Property     | Description       | Type      | Default     |
+| ------------ | ----------------- | --------- | ----------- |
+| `data`       | Table body data   | `object`  | `undefined` |
+| `dataHeaders`| Table header data | `object`  | `undefined` |
+| `strip`      | Table style       | `boolean` | `false`     |
 
 ----------------------------------------------
 

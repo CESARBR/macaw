@@ -40,6 +40,20 @@ export namespace Components {
     */
     'footerType': string;
   }
+  interface MHeader {
+    /**
+    * /**  The logged user's name
+    */
+    'avatarName': string;
+    /**
+    * /**  The logged user's avatar image URL or user name.
+    */
+    'avatarSource': string;
+    /**
+    * Brand name
+    */
+    'brandName': string;
+  }
   interface MIcon {
     /**
     * The icon name
@@ -103,6 +117,12 @@ declare global {
     new (): HTMLMFooterElement;
   };
 
+  interface HTMLMHeaderElement extends Components.MHeader, HTMLStencilElement {}
+  var HTMLMHeaderElement: {
+    prototype: HTMLMHeaderElement;
+    new (): HTMLMHeaderElement;
+  };
+
   interface HTMLMIconElement extends Components.MIcon, HTMLStencilElement {}
   var HTMLMIconElement: {
     prototype: HTMLMIconElement;
@@ -130,6 +150,7 @@ declare global {
     'm-avatar': HTMLMAvatarElement;
     'm-button': HTMLMButtonElement;
     'm-footer': HTMLMFooterElement;
+    'm-header': HTMLMHeaderElement;
     'm-icon': HTMLMIconElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
@@ -163,6 +184,20 @@ declare namespace LocalJSX {
     * Footer class
     */
     'footerType'?: string;
+  }
+  interface MHeader {
+    /**
+    * /**  The logged user's name
+    */
+    'avatarName'?: string;
+    /**
+    * /**  The logged user's avatar image URL or user name.
+    */
+    'avatarSource'?: string;
+    /**
+    * Brand name
+    */
+    'brandName'?: string;
   }
   interface MIcon {
     /**
@@ -209,6 +244,7 @@ declare namespace LocalJSX {
     'm-avatar': MAvatar;
     'm-button': MButton;
     'm-footer': MFooter;
+    'm-header': MHeader;
     'm-icon': MIcon;
     'm-table': MTable;
     'm-tbody': MTbody;
@@ -225,6 +261,7 @@ declare module "@stencil/core" {
       'm-avatar': LocalJSX.MAvatar & JSXBase.HTMLAttributes<HTMLMAvatarElement>;
       'm-button': LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
+      'm-header': LocalJSX.MHeader & JSXBase.HTMLAttributes<HTMLMHeaderElement>;
       'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
