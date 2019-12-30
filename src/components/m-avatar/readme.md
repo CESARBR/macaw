@@ -8,32 +8,24 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property     | Attribute  | Description             | Type     | Default     |
-| ------------ | ---------- | ----------------------- | -------- | ----------- |
-| `dataSource` | `src`      | Image URL or user name  | `string` | `undefined` |
-| `dataAlt`    | `alt`      | Alternative description | `string` | `undefined` |
+| Property  | Attribute | Description              | Type     | Default     |
+| --------- | --------- | ------------------------ | -------- | ----------- |
+| `altDesc` | `alt`     | Alternative description. | `string` | `undefined` |
+| `source`  | `source`  | Image URL or user name.  | `string` | `undefined` |
 
 
-## Methods
+## Dependencies
 
-### `validURL() => Boolean`
+### Used by
 
-Check if a given URL is valid
+ - [m-header](../m-header)
 
-#### Returns
-
-Type: `Boolean`
-
-### `validURL() => String`
-
-Get initials of first and last names from a given string
-
-#### Returns
-
-Type: `String`
-
-
-
+### Graph
+```mermaid
+graph TD;
+  m-header --> m-avatar
+  style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

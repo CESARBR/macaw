@@ -8,10 +8,24 @@ This is a magic tbody or not ;)
 
 ## Properties
 
-| Property   | Description      | Type     | Default     |
-| ---------- | ---------------- | -------- | ----------- |
-| `body`     | Table body rows  | `array`  | `undefined` |
-| `header`   | Table body cells | `array`  | `undefined` |
+| Property | Attribute | Description  | Type | Default     |
+| -------- | --------- | ------------ | ---- | ----------- |
+| `body`   | --        | Table Body   | `[]` | `undefined` |
+| `header` | --        | Table Header | `[]` | `undefined` |
+
+
+## Dependencies
+
+### Used by
+
+ - [m-table](../m-table)
+
+### Graph
+```mermaid
+graph TD;
+  m-table --> m-tbody
+  style m-tbody fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
