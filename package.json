@@ -1,5 +1,5 @@
 {
-  "name": "macaw",
+  "name": "@cesarbr/macaw",
   "version": "0.0.1",
   "description": "Macaw - CESAR Design System",
   "keywords": [
@@ -46,5 +46,6 @@
     "url": "git@gitlab.com:cesarbr/cesar-apps/macaw/macaw.git"
   },
   "author": "CESAR - Centro de Estudos e Sistemas Avançados do Recife",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {}
 }
