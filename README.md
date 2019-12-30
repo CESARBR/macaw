@@ -41,10 +41,20 @@ When creating new component tags, we recommend using prefix `m-`. For example `m
 
 ### Script tag
 
-- Put a script tag `<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+1. Put a script tag `<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>` in the head of your index.html
+2. Then you can use the element anywhere in your template, JSX, html etc
 
 ### NPM
-- Run `npm install  @cesarbr/macaw --save`
-- Add an import to the npm packages `import { defineCustomElements as macaw } from 'cesarbr/macaw/dist/loader';`
-- Then you can use the element anywhere in your template, JSX, html etc
+1. Run 
+```bash
+$ npm install  @cesarbr/macaw --save
+```
+2. Add an import to the npm packages
+```js
+import { defineCustomElements as macaw } from '@cesarbr/macaw/loader';
+```
+3. Init macaw
+```js
+macaw(window);
+```
+4. Then you can use the element anywhere in your template, JSX, html etc
