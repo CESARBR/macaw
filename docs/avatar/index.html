@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   
+  <meta name="Description" content="">
+  
 
-  <title>Page not found - Macaw</title>
+  <title>Avatar - Macaw</title>
   <link rel="stylesheet" href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//assets/css/just-the-docs.css">
 
   
@@ -57,9 +59,9 @@
     
       
         
-          <li class="navigation-list-item">
+          <li class="navigation-list-item active">
             
-            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//avatar/" class="navigation-list-link">Avatar</a>
+            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//avatar/" class="navigation-list-link active">Avatar</a>
             
           </li>
         
@@ -184,9 +186,68 @@
           
         
         <div id="main-content" class="page-content" role="main">
-          <h1>Page not found</h1>
+          <h1 class="no_toc" id="avatar">Avatar</h1>
 
-<p>The page you requested could not be found. Try using the navigation or search to find what you're looking for or go to this <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site/">site's home page</a>.</p>
+<p>O <code class="highlighter-rouge">m-avatar</code> é responsável pela renderização do avatar do usuário, seja uma imagem ou as iniciais de seu nome.</p>
+
+<h2 id="exemplo">Exemplo</h2>
+
+<m-avatar source="https://cms.qz.com/wp-content/uploads/2018/12/earring2.png" data-alt="Alternative description"></m-avatar>
+<m-avatar source="Mary Smith Montgomery"></m-avatar>
+
+<h4 id="html">HTML</h4>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;m-avatar</span> <span class="na">source=</span><span class="s">"https://cms.qz.com/wp-content/uploads/2018/12/earring2.png"</span> <span class="na">data-alt=</span><span class="s">"Alternative description"</span><span class="nt">&gt;&lt;/m-avatar&gt;</span>
+<span class="nt">&lt;m-avatar</span> <span class="na">source=</span><span class="s">"Mary Smith Montgomery"</span><span class="nt">&gt;&lt;/m-avatar&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="propriedades">Propriedades</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Atributo</th>
+      <th>Descrição</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">dataSource</code></td>
+      <td><code class="highlighter-rouge">src</code></td>
+      <td>URL da imagem ou nome do usuário</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">dataAlt</code></td>
+      <td><code class="highlighter-rouge">alt</code></td>
+      <td>Descrição alternativa</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="métodos">Métodos</h2>
+
+<h3 id="validurl--boolean"><code class="highlighter-rouge">validURL() =&gt; Boolean</code></h3>
+
+<p>Check if a given URL is valid</p>
+
+<h4 id="returns">Returns</h4>
+
+<p>Type: <code class="highlighter-rouge">Boolean</code></p>
+
+<h3 id="validurl--string"><code class="highlighter-rouge">validURL() =&gt; String</code></h3>
+
+<p>Get initials of first and last names from a given string</p>
+
+<h4 id="returns-1">Returns</h4>
+
+<p>Type: <code class="highlighter-rouge">String</code></p>
 
 
           

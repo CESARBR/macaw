@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   
+  <meta name="Description" content="">
+  
 
-  <title>Page not found - Macaw</title>
+  <title>Button - Macaw</title>
   <link rel="stylesheet" href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//assets/css/just-the-docs.css">
 
   
@@ -67,9 +69,9 @@
     
       
         
-          <li class="navigation-list-item">
+          <li class="navigation-list-item active">
             
-            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//button/" class="navigation-list-link">Button</a>
+            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//button/" class="navigation-list-link active">Button</a>
             
           </li>
         
@@ -184,9 +186,60 @@
           
         
         <div id="main-content" class="page-content" role="main">
-          <h1>Page not found</h1>
+          <h1 class="no_toc" id="button">Button</h1>
 
-<p>The page you requested could not be found. Try using the navigation or search to find what you're looking for or go to this <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site/">site's home page</a>.</p>
+<p>O <code class="highlighter-rouge">m-button</code> é o botão do Macaw. É possível desabilitá-lo ou adicionar um tooltip a ele.</p>
+
+<h2 id="exemplo">Exemplo</h2>
+
+<m-button class="my-button" title="Button default">Button</m-button>
+<m-button class="my-button--disabled" title="Button disabled" disabled="">Button disabled</m-button>
+
+<h4 id="html">HTML</h4>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;m-button</span> <span class="na">class=</span><span class="s">"my-button"</span> <span class="na">title=</span><span class="s">"Button default"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/m-button&gt;</span>
+<span class="nt">&lt;m-button</span> <span class="na">class=</span><span class="s">"my-button--disabled"</span> <span class="na">title=</span><span class="s">"Button disabled"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Button disabled<span class="nt">&lt;/m-button&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="propriedades">Propriedades</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Atributo</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">disabled</code></td>
+      <td><code class="highlighter-rouge">disabled</code></td>
+      <td>Botão desabilitado</td>
+      <td><code class="highlighter-rouge">boolean</code></td>
+      <td><code class="highlighter-rouge">false</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">tooltip</code></td>
+      <td><code class="highlighter-rouge">title</code></td>
+      <td>Tooltip do botão</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="métodos">Métodos</h2>
+
+<h3 id="mytip--promisestring"><code class="highlighter-rouge">myTip() =&gt; Promise&lt;string&gt;</code></h3>
+
+<p>Method showPrompt</p>
+
+<h4 id="returns">Returns</h4>
+
+<p>Type: <code class="highlighter-rouge">Promise&lt;string&gt;</code></p>
 
 
           

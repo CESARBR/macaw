@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   
+  <meta name="Description" content="">
+  
 
-  <title>Page not found - Macaw</title>
+  <title>Footer - Macaw</title>
   <link rel="stylesheet" href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//assets/css/just-the-docs.css">
 
   
@@ -87,9 +89,9 @@
     
       
         
-          <li class="navigation-list-item">
+          <li class="navigation-list-item active">
             
-            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//footer/" class="navigation-list-link">Footer</a>
+            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//footer/" class="navigation-list-link active">Footer</a>
             
           </li>
         
@@ -184,9 +186,44 @@
           
         
         <div id="main-content" class="page-content" role="main">
-          <h1>Page not found</h1>
+          <h1 class="no_toc" id="footer">Footer</h1>
 
-<p>The page you requested could not be found. Try using the navigation or search to find what you're looking for or go to this <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site/">site's home page</a>.</p>
+<p>O <code class="highlighter-rouge">m-footer</code> permite exibir informações de rodapé e é aberto para receber mais notas que se julgar necessário.</p>
+
+<h2 id="exemplo">Exemplo</h2>
+
+<m-footer type="block">Lorem</m-footer>
+<p><br /></p>
+<m-footer type="line">Lorem</m-footer>
+
+<h4 id="html">HTML</h4>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;m-footer</span> <span class="na">type=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem<span class="nt">&lt;/m-footer&gt;</span>
+<span class="nt">&lt;m-footer</span> <span class="na">type=</span><span class="s">"line"</span><span class="nt">&gt;</span>Lorem<span class="nt">&lt;/m-footer&gt;</span>
+</code></pre>
+</div>
+
+<h2 id="propriedades">Propriedades</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Atributo</th>
+      <th>Descrição</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">footerType</code></td>
+      <td><code class="highlighter-rouge">type</code></td>
+      <td>Estilo do footer (<code class="highlighter-rouge">line</code> ou <code class="highlighter-rouge">block</code>)</td>
+      <td><code class="highlighter-rouge">string</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
           

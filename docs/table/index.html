@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   
+  <meta name="Description" content="">
+  
 
-  <title>Page not found - Macaw</title>
+  <title>Table - Macaw</title>
   <link rel="stylesheet" href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//assets/css/just-the-docs.css">
 
   
@@ -117,9 +119,9 @@
     
       
         
-          <li class="navigation-list-item">
+          <li class="navigation-list-item active">
             
-            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//table/" class="navigation-list-link">Table</a>
+            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//table/" class="navigation-list-link active">Table</a>
             
           </li>
         
@@ -184,9 +186,63 @@
           
         
         <div id="main-content" class="page-content" role="main">
-          <h1>Page not found</h1>
+          <h1 class="no_toc" id="table">Table</h1>
 
-<p>The page you requested could not be found. Try using the navigation or search to find what you're looking for or go to this <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site/">site's home page</a>.</p>
+<p>A <code class="highlighter-rouge">m-table</code> trata de uma tabela Macaw onde é possível passar valores em formato de string para suas células. Ela usa , automaticamente, os componentes <code class="highlighter-rouge">m-thead</code> e <code class="highlighter-rouge">m-tbody</code> para alimentar seu conteúdo.</p>
+
+<h2 id="exemplo">Exemplo</h2>
+
+<m-table strip="true" class="mcw-preview"></m-table>
+<script>
+    const myTable = document.querySelector('m-table');
+    myTable.data = [{id: '01', name: 'Pedro', job: 'Coelho' }, {id: '02', name: 'Patrick', job: 'Estrela' }];
+    myTable.dataHeaders = [{title: 'ID', key: 'id'}, {title: 'Name', key: 'name'}, {title: 'Job', key: 'job'},];
+</script>
+
+<h4 id="html">HTML</h4>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;m-table</span> <span class="na">strip=</span><span class="s">'true'</span><span class="nt">&gt;&lt;/m-table&gt;</span>
+</code></pre>
+</div>
+
+<h4 id="js">JS</h4>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">const</span> <span class="nx">myTable</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'m-table'</span><span class="p">);</span>
+<span class="nx">myTable</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="p">[{</span><span class="na">id</span><span class="p">:</span> <span class="s1">'01'</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s1">'Pedro'</span><span class="p">,</span> <span class="na">job</span><span class="p">:</span> <span class="s1">'Coelho'</span> <span class="p">},</span> <span class="p">{</span><span class="na">id</span><span class="p">:</span> <span class="s1">'02'</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="s1">'Patrick'</span><span class="p">,</span> <span class="na">job</span><span class="p">:</span> <span class="s1">'Estrela'</span> <span class="p">}];</span>
+<span class="nx">myTable</span><span class="p">.</span><span class="nx">dataHeaders</span> <span class="o">=</span> <span class="p">[{</span><span class="na">title</span><span class="p">:</span> <span class="s1">'ID'</span><span class="p">,</span> <span class="na">key</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">},</span> <span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s1">'Name'</span><span class="p">,</span> <span class="na">key</span><span class="p">:</span> <span class="s1">'name'</span><span class="p">},</span> <span class="p">{</span><span class="na">title</span><span class="p">:</span> <span class="s1">'Job'</span><span class="p">,</span> <span class="na">key</span><span class="p">:</span> <span class="s1">'job'</span><span class="p">},];</span>
+</code></pre>
+</div>
+
+<h2 id="propriedades">Propriedades</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Propriedade</th>
+      <th>Descrição</th>
+      <th>Tipo</th>
+      <th>Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">data</code></td>
+      <td>Dados para o body da tabela</td>
+      <td><code class="highlighter-rouge">object</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">dataHeaders</code></td>
+      <td>Dados para o header da tabela</td>
+      <td><code class="highlighter-rouge">object</code></td>
+      <td><code class="highlighter-rouge">undefined</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">strip</code></td>
+      <td>Estilo da tabela</td>
+      <td><code class="highlighter-rouge">boolean</code></td>
+      <td><code class="highlighter-rouge">false</code></td>
+    </tr>
+  </tbody>
+</table>
 
 
           

@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   
+  <meta name="Description" content="">
+  
 
-  <title>Page not found - Macaw</title>
+  <title>Home - Macaw</title>
   <link rel="stylesheet" href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//assets/css/just-the-docs.css">
 
   
@@ -37,9 +39,9 @@
     
       
         
-          <li class="navigation-list-item">
+          <li class="navigation-list-item active">
             
-            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//" class="navigation-list-link">Home</a>
+            <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site//" class="navigation-list-link active">Home</a>
             
           </li>
         
@@ -181,12 +183,68 @@
       </div>
       <div class="main-content">
         
-          
-        
         <div id="main-content" class="page-content" role="main">
-          <h1>Page not found</h1>
+          <h1 id="macaw-arara">Macaw (arara)</h1>
 
-<p>The page you requested could not be found. Try using the navigation or search to find what you're looking for or go to this <a href="https://cesarbr.gitlab.io/cesar-apps/macaw/site/">site's home page</a>.</p>
+<blockquote>
+  <p><em>Os termos arara e ará designam várias aves psitaciformes de grande porte da tribo Arini, cauda longa e um bico curvado resistente. Geralmente, os gêneros comumente chamados de araras são os gêneros Ara, Anodorhynchus e Cyanopsitta.</em></p>
+</blockquote>
+
+<h6 id="wikipedia"><a href="https://pt.wikipedia.org/wiki/Arara">Wikipedia</a></h6>
+
+<hr />
+<h2 id="o-que-é">O que é?</h2>
+
+<p>O <strong>Macaw</strong> se trata de um framework que busca trazer uma identidade visual e consistência para os serviços internos do <a href="https://www.cesar.org.br/">CESAR</a>.
+Para que possa ser agregado em diversos sistemas com possibilidades de linguagens e tecnologias diferentes, foi escolhida a “suíte” de <a href="https://developer.mozilla.org/pt-BR/docs/Web/Web_Components">Web Components</a> com <a href="https://www.typescriptlang.org/index.html">Typescript</a>.</p>
+
+<p>Para auxiliar com a construção e compilação desses componentes, também estamos usando o <a href="https://stenciljs.com/">StencilJS</a> que possui uma gama de opções que facilitam esse processo, além de ter grande suporte na web.</p>
+
+<h3 id="o-que-tem-de-tão-especial-nos-web-components">O que tem de tão especial nos Web Components?</h3>
+<ul>
+  <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/Web_Components/Usando_elementos_customizados">Usando elementos customizados</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Usando shadow DOM</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots">Usando templates e slots</a></li>
+</ul>
+
+<hr />
+
+<h2 id="vamos-começar">Vamos começar</h2>
+
+<h3 id="via-tag-de-script">Via tag de script</h3>
+
+<script src="https://unpkg.com/@cesarbr/macaw/dist/macaw.js"></script>
+
+<ol>
+  <li>Adicione a tag script <code class="highlighter-rouge">&lt;script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'&gt;&lt;/script&gt;</code> logo antes do fechamento da tag <code class="highlighter-rouge">&lt;head&gt;</code>;</li>
+  <li>Agor você pode usar qualquer componente em seus templates, JSX, html e etc.</li>
+</ol>
+
+<h3 id="via-npm">Via NPM</h3>
+
+<ol>
+  <li>Execute o comando:
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>npm install  @cesarbr/macaw --save
+</code></pre>
+    </div>
+  </li>
+  <li>Importe o macaw:
+    <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="kr">import</span> <span class="p">{</span> <span class="nx">defineCustomElements</span> <span class="nx">as</span> <span class="nx">macaw</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">'@cesarbr/macaw/loader'</span><span class="p">;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Inicie o macaw
+    <div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="nx">macaw</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
+</code></pre>
+    </div>
+  </li>
+  <li>Agora você pode usar qualquer componente em seus templates, JSX, html e etc.</li>
+</ol>
+
+<hr />
+
+<h2 id="contato">Contato</h2>
+<p>Caso queira entrar em contato conosco, dar feedbacks ou compartilhar sentimentos, pode mandar um <a href="mailto:macaw-l@cesar.org.br">e-mail pra gente</a></p>
 
 
           
