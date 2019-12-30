@@ -41,7 +41,7 @@ When creating new component tags, we recommend using prefix `m-`. For example `m
 
 ### Script tag
 
-- Put a script tag `<script src='https://unpkg.com/macaw@0.0.1/dist/macaw.js'></script>` in the head of your index.html
+- Put a script tag `<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, html etc
 
 ### NPM
