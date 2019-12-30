@@ -8,11 +8,25 @@ This is a magic header or not ;)
 
 ## Properties
 
-| Property        |  Description              | Type      | Default     |
-| --------------- |  ------------------------ | --------- | ----------- |
-| `brandName`     |  Brand name               | `string`  | `undefined` |
-| `avatarName`    |  Logged user name         | `string`  | `undefined` |
-| `avatarSource`  |  Logged user avatar image | `string`  | `undefined` |
+| Property       | Attribute       | Description                                           | Type     | Default     |
+| -------------- | --------------- | ----------------------------------------------------- | -------- | ----------- |
+| `avatarName`   | `avatar-name`   | /**  The logged user's name                           | `string` | `undefined` |
+| `avatarSource` | `avatar-source` | /**  The logged user's avatar image URL or user name. | `string` | `undefined` |
+| `brandName`    | `brand-name`    | Brand name                                            | `string` | `undefined` |
+
+
+## Dependencies
+
+### Depends on
+
+- [m-avatar](../m-avatar)
+
+### Graph
+```mermaid
+graph TD;
+  m-header --> m-avatar
+  style m-header fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

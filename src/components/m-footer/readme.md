@@ -8,9 +8,10 @@ This is a magic footer or not ;)
 
 ## Properties
 
-| Property     | Attribute  | Description                  | Type     | Default     |
-| ----------   | ---------- | ---------------------------- | -------- | ----------- |
-| `footerType` | `type`     | Footer style (line or block) | `string` | `undefined` |
+| Property     | Attribute | Description  | Type     | Default     |
+| ------------ | --------- | ------------ | -------- | ----------- |
+| `footerType` | `type`    | Footer class | `string` | `undefined` |
+
 
 ----------------------------------------------
 

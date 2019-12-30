@@ -8,10 +8,11 @@ This is a magic icons package or not ;)
 
 ## Properties
 
-| Property   | Attribute      | Description    | Type      | Default     |
-| ---------- | -------------- | -------------- | --------- | ----------- |
-|   `name`   |                | Icon name      | `string`  | `undefined` |
-| `tootilp`  |     `title`    | Icon tooltip   | `string`  | `undefined` |
+| Property  | Attribute | Description   | Type     | Default     |
+| --------- | --------- | ------------- | -------- | ----------- |
+| `name`    | `name`    | The icon name | `string` | `undefined` |
+| `tooltip` | `title`   | Icon tooltip  | `string` | `undefined` |
+
 
 ----------------------------------------------
 

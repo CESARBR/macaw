@@ -8,9 +8,23 @@ This is a magic thead or not ;)
 
 ## Properties
 
-| Property   | Description        | Type    | Default     |
-| ---------- | ------------------ | ------- | ----------- |
-| `header`   | Table header cells | `array` | `undefined` |
+| Property | Attribute | Description  | Type | Default     |
+| -------- | --------- | ------------ | ---- | ----------- |
+| `header` | --        | Table Header | `[]` | `undefined` |
+
+
+## Dependencies
+
+### Used by
+
+ - [m-table](../m-table)
+
+### Graph
+```mermaid
+graph TD;
+  m-table --> m-thead
+  style m-thead fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
