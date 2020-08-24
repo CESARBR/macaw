@@ -64,6 +64,22 @@ export namespace Components {
     */
     'tooltip': string;
   }
+  interface MNavbar {
+    /**
+    * Navbar items.
+    */
+    'navItems': [];
+    /**
+    * Index of selected Navbar item.
+    */
+    'selectedIndex': number;
+  }
+  interface MNavbarItem {
+    /**
+    * Index of selected Navbar item.
+    */
+    'isActive': boolean;
+  }
   interface MTable {
     /**
     * Data Table
@@ -129,6 +145,18 @@ declare global {
     new (): HTMLMIconElement;
   };
 
+  interface HTMLMNavbarElement extends Components.MNavbar, HTMLStencilElement {}
+  var HTMLMNavbarElement: {
+    prototype: HTMLMNavbarElement;
+    new (): HTMLMNavbarElement;
+  };
+
+  interface HTMLMNavbarItemElement extends Components.MNavbarItem, HTMLStencilElement {}
+  var HTMLMNavbarItemElement: {
+    prototype: HTMLMNavbarItemElement;
+    new (): HTMLMNavbarItemElement;
+  };
+
   interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {}
   var HTMLMTableElement: {
     prototype: HTMLMTableElement;
@@ -152,6 +180,8 @@ declare global {
     'm-footer': HTMLMFooterElement;
     'm-header': HTMLMHeaderElement;
     'm-icon': HTMLMIconElement;
+    'm-navbar': HTMLMNavbarElement;
+    'm-navbar-item': HTMLMNavbarItemElement;
     'm-table': HTMLMTableElement;
     'm-tbody': HTMLMTbodyElement;
     'm-thead': HTMLMTheadElement;
@@ -209,6 +239,22 @@ declare namespace LocalJSX {
     */
     'tooltip'?: string;
   }
+  interface MNavbar {
+    /**
+    * Navbar items.
+    */
+    'navItems'?: [];
+    /**
+    * Index of selected Navbar item.
+    */
+    'selectedIndex'?: number;
+  }
+  interface MNavbarItem {
+    /**
+    * Index of selected Navbar item.
+    */
+    'isActive'?: boolean;
+  }
   interface MTable {
     /**
     * Data Table
@@ -246,6 +292,8 @@ declare namespace LocalJSX {
     'm-footer': MFooter;
     'm-header': MHeader;
     'm-icon': MIcon;
+    'm-navbar': MNavbar;
+    'm-navbar-item': MNavbarItem;
     'm-table': MTable;
     'm-tbody': MTbody;
     'm-thead': MThead;
@@ -263,6 +311,8 @@ declare module "@stencil/core" {
       'm-footer': LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
       'm-header': LocalJSX.MHeader & JSXBase.HTMLAttributes<HTMLMHeaderElement>;
       'm-icon': LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
+      'm-navbar': LocalJSX.MNavbar & JSXBase.HTMLAttributes<HTMLMNavbarElement>;
+      'm-navbar-item': LocalJSX.MNavbarItem & JSXBase.HTMLAttributes<HTMLMNavbarItemElement>;
       'm-table': LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
       'm-tbody': LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
       'm-thead': LocalJSX.MThead & JSXBase.HTMLAttributes<HTMLMTheadElement>;
