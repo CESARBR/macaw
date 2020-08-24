@@ -1,3 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
-  <path fill="currentColor" d="M59,27.5v11H75v-11Zm15,1v1l-7,4.612L60,29.5v-1Zm-14,9V30.695l7,4.614L74,30.7v6.8Z" transform="translate(-58 -24)"/>
+  <path fill="currentColor" d="M131.5,22h-15a.5.5,0,0,0-.5.5v10a.5.5,0,0,0,.5.5h15a.5.5,0,0,0,.5-.5v-10A.5.5,0,0,0,131.5,22Zm-.5,1v1l-7,4.611L117,24V23Zm-14,9V25.195l6.725,4.432a.5.5,0,0,0,.55,0L131,25.2V32Z" transform="translate(-115 -18)"/>
 </svg>
