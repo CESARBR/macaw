@@ -28,16 +28,6 @@
     color: $orange;
   }
 
-  /* &__list-item--active::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    width: calc(100% - 24px);
-    background-color: $orange;
-  } */
-
   &__list-item-indicator {
     height: 2px;
     position: absolute;
