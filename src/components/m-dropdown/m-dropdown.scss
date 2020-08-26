@@ -1,0 +1,20 @@
+.dropdown {
+  position: relative;
+  &__content {
+    position: absolute;
+    background-color: $white;
+    left: 0;
+    z-index: 900;
+    margin: 4px 0 0;
+    // display: none;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+  }
+  .list-items {
+    min-width: 140px;
+    padding: 8px 0;
+    list-style: none;
+    text-align: left;
+    margin: 0;
+  }
+}
