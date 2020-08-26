@@ -8,10 +8,10 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property  | Attribute | Description              | Type     | Default     |
-| --------- | --------- | ------------------------ | -------- | ----------- |
-| `altDesc` | `alt`     | Alternative description. | `string` | `undefined` |
-| `source`  | `source`  | Image URL or user name.  | `string` | `undefined` |
+| Property        | Attribute       | Description                     | Type     | Default  |
+| --------------- | --------------- | ------------------------------- | -------- | ---------|
+| `navItems`      | -               | Array with items content.       | `array`  | -        |
+| `selectedIndex` | `selected-index`| Initial selected item (index 0).| `number` | 0        |
 
 
 ## Dependencies

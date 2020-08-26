@@ -6,6 +6,8 @@ import { Component, Element, Prop, h } from '@stencil/core';
   shadow: false,
 })
 export class Navbar {
+  @Element() selectedElement: HTMLElement;
+  
   /**
    * Navbar items.
    */
@@ -14,17 +16,20 @@ export class Navbar {
   /** 
    * Index of selected Navbar item.
    */
-  @Prop() selectedIndex: number = 0;
+  @Prop({ attribute: 'selected-index' }) selectedIndex: number = 0;
 
-  @Element() selectedElement: HTMLElement;
+  /** 
+   * Whether item is active.
+   */
+  @Prop({ mutable: true }) active: boolean;
 
   render() {
     return (
       <nav class="m-navbar" role="navigation">
         <ul class="m-navbar__list">
-          {this.navItems
-            ? this.navItems.map((item, index) =>
-              <li class={this.selectedIndex === index ? 'm-navbar__list-item--active' : 'm-navbar__list-item'} innerHTML={item}></li>
+          {this.navItems ? 
+            this.navItems.map((item, index) =>
+              <m-navbar-item active={this.selectedIndex === index} innerHTML={item}></m-navbar-item>
             )
             : <slot />
           }

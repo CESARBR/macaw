@@ -9,22 +9,37 @@
     display: flex;
   }
   
-  &__list-item, &__list-item--active {
-    margin: 0 12px 7px;
+  &__list-item,
+  &__list-item--active {
     color: $gray;
     position: relative;
+    border-radius: $borderRadius;
 
     a {
+      display: inline-block;
+      margin: 7px 12px;
       text-decoration: none;
     }
   }
 
-  &__list-item a:visited {
-    color: $gray;
+  &__list-item {
+    &:hover {
+      background: $ice;
+
+      .m-header & {
+        background: darken($ice, 5%);
+      }
+    }
+
+    a:visited,
+    button {
+      color: $gray;
+    }
   }
 
   &__list-item--active,
-  &__list-item--active a {
+  &__list-item--active a,
+  &__list-item--active button {
     color: $orange;
   }
 
@@ -35,12 +50,5 @@
     left: 0;
     background-color: $orange;
     transition: width .5s, left .5s;
-  }
-}
-
-.m-navbar .m-navbar__list-item,
-.m-navbar .m-navbar__list-item--active {
-  .m-header & {
-    margin-top: 7px;
   }
 }

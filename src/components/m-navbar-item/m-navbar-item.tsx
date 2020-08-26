@@ -7,13 +7,13 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class Navbar {
   /** 
-   * Index of selected Navbar item.
+   * Whether item is active.
    */
-  @Prop({ attribute: 'active' }) isActive: boolean;
+  @Prop({ attribute: 'active' }) active: boolean;
 
   render() {
     return (
-      <li class={this.isActive === true ? 'm-navbar__list-item--active' : 'm-navbar__list-item'}><slot /></li>
+      <li class={this.active === true ? 'm-navbar__list-item--active' : 'm-navbar__list-item'}><slot /></li>
     );
   }
 }

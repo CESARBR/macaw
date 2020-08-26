@@ -177,8 +177,10 @@
 
   <script>
     const myTable = document.querySelector('m-table'), myNavbarInsideHeader = document.querySelector('m-navbar');
+    // Table data
     myTable.data = [{id: '01', name: 'Pedro', job: 'Coelho' }, {id: '02', name: 'Patrick', job: 'Estrela' }];
     myTable.dataHeaders = [{title: 'ID', key: 'id'}, {title: 'Name', key: 'name'}, {title: 'Job', key: 'job'},];
+    // Navbar (inside Header) data
     myNavbarInsideHeader.navItems = ['<a href="index.html">Link 1</a>', '<a href="index.html">Link 2</a>','<a href="index.html">Link 3</a>', '<a href="index.html">Link 4</a>'];
   </script>
 </body>

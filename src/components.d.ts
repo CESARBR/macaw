@@ -66,6 +66,10 @@ export namespace Components {
   }
   interface MNavbar {
     /**
+    * Whether item is active.
+    */
+    'active': boolean;
+    /**
     * Navbar items.
     */
     'navItems': [];
@@ -76,9 +80,9 @@ export namespace Components {
   }
   interface MNavbarItem {
     /**
-    * Index of selected Navbar item.
+    * Whether item is active.
     */
-    'isActive': boolean;
+    'active': boolean;
   }
   interface MTable {
     /**
@@ -241,6 +245,10 @@ declare namespace LocalJSX {
   }
   interface MNavbar {
     /**
+    * Whether item is active.
+    */
+    'active'?: boolean;
+    /**
     * Navbar items.
     */
     'navItems'?: [];
@@ -251,9 +259,9 @@ declare namespace LocalJSX {
   }
   interface MNavbarItem {
     /**
-    * Index of selected Navbar item.
+    * Whether item is active.
     */
-    'isActive'?: boolean;
+    'active'?: boolean;
   }
   interface MTable {
     /**

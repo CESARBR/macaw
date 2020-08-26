@@ -8,10 +8,9 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property  | Attribute | Description              | Type     | Default     |
-| --------- | --------- | ------------------------ | -------- | ----------- |
-| `altDesc` | `alt`     | Alternative description. | `string` | `undefined` |
-| `source`  | `source`  | Image URL or user name.  | `string` | `undefined` |
+| Property | Attribute | Description         | Type      | Default |
+| -------- | --------- | ------------------- | --------- | ------- |
+| `active` | `active`  | Set item as active. | `boolean` | `false` |
 
 
 ## Dependencies
