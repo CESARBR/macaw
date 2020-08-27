@@ -13,7 +13,7 @@
   &__list-item--active {
     color: $gray;
     position: relative;
-    border-radius: $borderRadius;
+    border-radius: $default-border-radius;
 
     a {
       display: inline-block;

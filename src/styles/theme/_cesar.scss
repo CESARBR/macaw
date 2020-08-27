@@ -9,7 +9,25 @@ $dark-gray: #333;
 $black: #000;
 
 $orange: #E87305;
+$red: #F93E06;
 
-$primary-color: $orange;
+// system colors
+$primary-color: $orange !default;
+$error-color: $red !default;
 
-$borderRadius: 5px;
+// backgrounds
+$background-light: $white !default;
+
+// border
+$default-border-width: 1px;
+$default-border-style: solid;
+$default-border-color: $lightest-gray !default;
+$default-border-radius: 4px !default;
+
+$default-border: $default-border-width $default-border-style $default-border-color;
+
+$focus-border-color: $primary-color;
+$error-border-color: $error-color;
+
+// padding
+$default-padding: 8px !default;
