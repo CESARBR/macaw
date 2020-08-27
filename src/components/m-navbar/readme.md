@@ -8,23 +8,24 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property        | Attribute       | Description                     | Type     | Default  |
-| --------------- | --------------- | ------------------------------- | -------- | ---------|
-| `navItems`      | -               | Array with items content.       | `array`  | -        |
-| `selectedIndex` | `selected-index`| Initial selected item (index 0).| `number` | 0        |
+| Property        | Attribute        | Description                    | Type      | Default     |
+| --------------- | ---------------- | ------------------------------ | --------- | ----------- |
+| `active`        | `active`         | Whether item is active.        | `boolean` | `undefined` |
+| `navItems`      | --               | Navbar items.                  | `[]`      | `undefined` |
+| `selectedIndex` | `selected-index` | Index of selected Navbar item. | `number`  | `0`         |
 
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [m-header](../m-header)
+- [m-navbar-item](../m-navbar-item)
 
 ### Graph
 ```mermaid
 graph TD;
-  m-header --> m-avatar
-  style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
+  m-navbar --> m-navbar-item
+  style m-navbar fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

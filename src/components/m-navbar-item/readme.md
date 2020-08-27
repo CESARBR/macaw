@@ -8,22 +8,22 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property | Attribute | Description         | Type      | Default |
-| -------- | --------- | ------------------- | --------- | ------- |
-| `active` | `active`  | Set item as active. | `boolean` | `false` |
+| Property | Attribute | Description             | Type      | Default     |
+| -------- | --------- | ----------------------- | --------- | ----------- |
+| `active` | `active`  | Whether item is active. | `boolean` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [m-header](../m-header)
+ - [m-navbar](../m-navbar)
 
 ### Graph
 ```mermaid
 graph TD;
-  m-header --> m-avatar
-  style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
+  m-navbar --> m-navbar-item
+  style m-navbar-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
