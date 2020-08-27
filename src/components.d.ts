@@ -30,6 +30,14 @@ export namespace Components {
          */
         "tooltip": string;
     }
+    interface MDropdown {
+        /**
+          * Dropdown label
+         */
+        "label": string;
+    }
+    interface MDropdownItem {
+    }
     interface MFooter {
         /**
           * Footer class
@@ -150,6 +158,18 @@ declare global {
         prototype: HTMLMButtonElement;
         new (): HTMLMButtonElement;
     };
+    interface HTMLMDropdownElement extends Components.MDropdown, HTMLStencilElement {
+    }
+    var HTMLMDropdownElement: {
+        prototype: HTMLMDropdownElement;
+        new (): HTMLMDropdownElement;
+    };
+    interface HTMLMDropdownItemElement extends Components.MDropdownItem, HTMLStencilElement {
+    }
+    var HTMLMDropdownItemElement: {
+        prototype: HTMLMDropdownItemElement;
+        new (): HTMLMDropdownItemElement;
+    };
     interface HTMLMFooterElement extends Components.MFooter, HTMLStencilElement {
     }
     var HTMLMFooterElement: {
@@ -207,6 +227,8 @@ declare global {
     interface HTMLElementTagNameMap {
         "m-avatar": HTMLMAvatarElement;
         "m-button": HTMLMButtonElement;
+        "m-dropdown": HTMLMDropdownElement;
+        "m-dropdown-item": HTMLMDropdownItemElement;
         "m-footer": HTMLMFooterElement;
         "m-header": HTMLMHeaderElement;
         "m-icon": HTMLMIconElement;
@@ -238,6 +260,14 @@ declare namespace LocalJSX {
           * Button tooltip
          */
         "tooltip"?: string;
+    }
+    interface MDropdown {
+        /**
+          * Dropdown label
+         */
+        "label"?: string;
+    }
+    interface MDropdownItem {
     }
     interface MFooter {
         /**
@@ -348,6 +378,8 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "m-avatar": MAvatar;
         "m-button": MButton;
+        "m-dropdown": MDropdown;
+        "m-dropdown-item": MDropdownItem;
         "m-footer": MFooter;
         "m-header": MHeader;
         "m-icon": MIcon;
@@ -365,6 +397,8 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "m-avatar": LocalJSX.MAvatar & JSXBase.HTMLAttributes<HTMLMAvatarElement>;
             "m-button": LocalJSX.MButton & JSXBase.HTMLAttributes<HTMLMButtonElement>;
+            "m-dropdown": LocalJSX.MDropdown & JSXBase.HTMLAttributes<HTMLMDropdownElement>;
+            "m-dropdown-item": LocalJSX.MDropdownItem & JSXBase.HTMLAttributes<HTMLMDropdownItemElement>;
             "m-footer": LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
             "m-header": LocalJSX.MHeader & JSXBase.HTMLAttributes<HTMLMHeaderElement>;
             "m-icon": LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;

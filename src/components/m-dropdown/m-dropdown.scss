@@ -1,0 +1,55 @@
+.m-dropdown {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    background-color: $white;
+    left: 0;
+    z-index: 900;
+    margin: 4px 0 0;
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  .list-items {
+    min-width: 100px;
+    padding: 8px 0;
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    
+  }
+
+  .icon {
+    margin-left: 8px;
+    .m-icon {
+      animation: chevron-up 0.3s forwards;
+    }
+    &--closed {
+      .m-icon {
+        animation: chevron-down 0.3s forwards;
+      }
+    }
+  }
+
+  
+}
+@keyframes chevron-down {
+  from {
+    transform: scaleY(-1);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes chevron-up {
+  to {
+    transform: scaleY(-1);
+  }
+}
