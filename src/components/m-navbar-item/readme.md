@@ -1,6 +1,6 @@
-# m-avatar
+# m-navbar-item
 
-This is a magic avatar or not ;)
+This is a magic navbar-item or not ;)
 
 
 <!-- Auto Generated Below -->
@@ -19,11 +19,25 @@ This is a magic avatar or not ;)
 
  - [m-navbar](../m-navbar)
 
-### Graph
-```mermaid
-graph TD;
-  m-navbar --> m-navbar-item
-  style m-navbar-item fill:#f9f,stroke:#333,stroke-width:4px
+## Usage
+```html
+<m-navbar>
+  <m-navbar-item active=true>
+    <a href="index.html">Link 1</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 2</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 3</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 4</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 5</a>
+  </m-navbar-item>
+</m-navbar>
 ```
 
 ----------------------------------------------
