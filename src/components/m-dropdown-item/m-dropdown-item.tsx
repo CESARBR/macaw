@@ -9,7 +9,7 @@ export class Item {
 
   render() {
     return (
-      <li class="item-list">
+      <li class="m-dropdown-item">
         <slot/>
       </li>
     );
