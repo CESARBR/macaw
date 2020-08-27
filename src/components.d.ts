@@ -60,6 +60,26 @@ export namespace Components {
          */
         "tooltip": string;
     }
+    interface MNavbar {
+        /**
+          * Whether item is active.
+         */
+        "active": boolean;
+        /**
+          * Navbar items.
+         */
+        "navItems": [];
+        /**
+          * Index of selected Navbar item.
+         */
+        "selectedIndex": number;
+    }
+    interface MNavbarItem {
+        /**
+          * Whether item is active.
+         */
+        "active": boolean;
+    }
     interface MTable {
         /**
           * Data Table
@@ -144,6 +164,18 @@ declare global {
         prototype: HTMLMIconElement;
         new (): HTMLMIconElement;
     };
+    interface HTMLMNavbarElement extends Components.MNavbar, HTMLStencilElement {
+    }
+    var HTMLMNavbarElement: {
+        prototype: HTMLMNavbarElement;
+        new (): HTMLMNavbarElement;
+    };
+    interface HTMLMNavbarItemElement extends Components.MNavbarItem, HTMLStencilElement {
+    }
+    var HTMLMNavbarItemElement: {
+        prototype: HTMLMNavbarItemElement;
+        new (): HTMLMNavbarItemElement;
+    };
     interface HTMLMTableElement extends Components.MTable, HTMLStencilElement {
     }
     var HTMLMTableElement: {
@@ -174,6 +206,8 @@ declare global {
         "m-footer": HTMLMFooterElement;
         "m-header": HTMLMHeaderElement;
         "m-icon": HTMLMIconElement;
+        "m-navbar": HTMLMNavbarElement;
+        "m-navbar-item": HTMLMNavbarItemElement;
         "m-table": HTMLMTableElement;
         "m-tbody": HTMLMTbodyElement;
         "m-text-field": HTMLMTextFieldElement;
@@ -230,6 +264,26 @@ declare namespace LocalJSX {
           * Icon tooltip
          */
         "tooltip"?: string;
+    }
+    interface MNavbar {
+        /**
+          * Whether item is active.
+         */
+        "active"?: boolean;
+        /**
+          * Navbar items.
+         */
+        "navItems"?: [];
+        /**
+          * Index of selected Navbar item.
+         */
+        "selectedIndex"?: number;
+    }
+    interface MNavbarItem {
+        /**
+          * Whether item is active.
+         */
+        "active"?: boolean;
     }
     interface MTable {
         /**
@@ -289,6 +343,8 @@ declare namespace LocalJSX {
         "m-footer": MFooter;
         "m-header": MHeader;
         "m-icon": MIcon;
+        "m-navbar": MNavbar;
+        "m-navbar-item": MNavbarItem;
         "m-table": MTable;
         "m-tbody": MTbody;
         "m-text-field": MTextField;
@@ -304,6 +360,8 @@ declare module "@stencil/core" {
             "m-footer": LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
             "m-header": LocalJSX.MHeader & JSXBase.HTMLAttributes<HTMLMHeaderElement>;
             "m-icon": LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
+            "m-navbar": LocalJSX.MNavbar & JSXBase.HTMLAttributes<HTMLMNavbarElement>;
+            "m-navbar-item": LocalJSX.MNavbarItem & JSXBase.HTMLAttributes<HTMLMNavbarItemElement>;
             "m-table": LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;
             "m-tbody": LocalJSX.MTbody & JSXBase.HTMLAttributes<HTMLMTbodyElement>;
             "m-text-field": LocalJSX.MTextField & JSXBase.HTMLAttributes<HTMLMTextFieldElement>;

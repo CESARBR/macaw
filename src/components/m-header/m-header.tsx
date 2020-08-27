@@ -3,7 +3,7 @@ import { Component, h, Prop } from '@stencil/core';
 @Component({
   tag: 'm-header',
   styleUrl: 'm-header.scss',
-  shadow: true,
+  shadow: false,
 })
 export class Header {
 
