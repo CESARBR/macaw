@@ -54,7 +54,7 @@ export class TextField {
           disabled={this.disabled}
         />
         {this.type === 'search'
-          ? <m-icon name="magnifier" class="m-text-field__icon"></m-icon>
+          ? <m-icon name="magnifier" type="bold" class="m-text-field__icon"></m-icon>
           : ''
         }
       </Host>
