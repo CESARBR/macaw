@@ -8,12 +8,25 @@ This is a magic icons package or not ;)
 
 ## Properties
 
-| Property  | Attribute | Description                          | Type     | Default     |
-| --------- | --------- | ------------------------------------ | -------- | ----------- |
-| `name`    | `name`    | The icon name                        | `string` | `undefined` |
-| `tooltip` | `title`   | Icon tooltip                         | `string` | `undefined` |
-| `type`    | `type`    | Icon type: regular, bold and filled  | `string` | `undefined` |
+| Property  | Attribute | Description                              | Type     | Default     |
+| --------- | --------- | ---------------------------------------- | -------- | ----------- |
+| `name`    | `name`    | The icon name                            | `string` | `undefined` |
+| `tooltip` | `title`   | Icon tooltip                             | `string` | `undefined` |
+| `type`    | `type`    | The icon style: regular, bold and filled | `string` | `undefined` |
 
+
+## Dependencies
+
+### Used by
+
+ - [m-text-field](../m-text-field)
+
+### Graph
+```mermaid
+graph TD;
+  m-text-field --> m-icon
+  style m-icon fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 

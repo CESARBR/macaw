@@ -1,0 +1,56 @@
+.m-text-field {
+  border: none;
+  display: inline-block;
+  position: relative;
+
+  &__field {
+    background-color: $background-light;
+    border: $default-border;
+    border-radius: $default-border-radius;
+    padding: $default-padding;
+
+    &:focus {
+      border-color: $focus-border-color;
+      box-shadow: 0 0 0 2px transparentize($focus-border-color, 0.8);
+      outline: none;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &--not-valid {
+      background-color: mix($error-border-color, $background-light, 10);
+      border-color: $error-border-color;
+
+      &:focus {
+        border-color: $error-border-color;
+        box-shadow: 0 0 0 2px transparentize($error-border-color, 0.8);
+      }
+    }
+
+    &--search {
+      padding-left: 25px;
+      -webkit-appearance: textfield;
+      outline-offset: -2px;
+
+      &::-webkit-search-decoration,
+      &::-webkit-search-cancel-button,
+      &::-webkit-search-results-button,
+      &::-webkit-search-results-decoration {
+        -webkit-appearance: none;
+      }
+    }
+  }
+
+  &__icon {
+    color: $med-gray;
+    left: 7px;
+    position: absolute;
+    top: 8px;
+
+    .m-icon svg {
+      height: $base-font-size;
+    }
+  }
+}

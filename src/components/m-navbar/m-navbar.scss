@@ -1,0 +1,54 @@
+.m-navbar {
+  display: block;
+  position: relative;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  &__list-item,
+  &__list-item--active {
+    color: $gray;
+    position: relative;
+    border-radius: $default-border-radius;
+
+    a {
+      display: inline-block;
+      margin: 7px 12px;
+      text-decoration: none;
+    }
+  }
+
+  &__list-item {
+    &:hover {
+      background: $ice;
+
+      .m-header & {
+        background: darken($ice, 5%);
+      }
+    }
+
+    a:visited,
+    button {
+      color: $gray;
+    }
+  }
+
+  &__list-item--active,
+  &__list-item--active a,
+  &__list-item--active button {
+    color: $orange;
+  }
+
+  &__list-item-indicator {
+    height: 2px;
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    background-color: $orange;
+    transition: width .5s, left .5s;
+  }
+}
