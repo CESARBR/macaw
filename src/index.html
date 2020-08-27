@@ -55,7 +55,7 @@
       vertical-align: middle;
       width: auto;
     }
-    
+
   </style>
   <section class="row content-header">
     <h2>Header</h2>
@@ -78,28 +78,58 @@
           </g>
         </svg>
       </span>
-      <span slot="header-left"> dados complementares à esquerda</span>
+      <span slot="header-left">
+        <m-navbar></m-navbar>
+      </span>
       <span slot="header-right"> dados complementares à direita</span>
     </m-header>
   </section>
 
-  <section class='row'>
-    <h2>Button <span class='light-font'>Primary</span></h2>
+  <section class="row">
+    <h2>Navbar <span class="light-font">using m-navbar-items components</span></h2>
+    <m-navbar>
+      <m-navbar-item active=true>
+        <a href="index.html">Link 1</a>
+      </m-navbar-item>
+      <m-navbar-item>
+        <a href="index.html">Link 2</a>
+      </m-navbar-item>
+      <m-navbar-item>
+        <a href="index.html">Link 3</a>
+      </m-navbar-item>
+      <m-navbar-item>
+        <a href="index.html">Link 4</a>
+      </m-navbar-item>
+      <m-navbar-item>
+        <a href="index.html">Link 5</a>
+      </m-navbar-item>
+    </m-navbar>
+  </section>
+
+  <section class="row">
+    <h2>Button <span class="light-font">Primary</span></h2>
     <m-button class="my-button" title="Button default">Button</m-button>
     <m-button class="my-button--disabled" title="Button disabled" disabled>Button disabled</m-button>
     <m-button>Icon button <m-icon type="regular" name="sheet"></m-icon></m-button>
     <m-button><m-icon type="bold" name="sheet"></m-icon> Icon button</m-button>
   </section>
 
-  <section class='row content-table'>
-    <h2>Table <span class='light-font'>Strip</span></h2>
-    <m-table strip='true'></m-table>
+  <section class="row content-table">
+    <h2>Table <span class="light-font">Strip</span></h2>
+    <m-table strip="true"></m-table>
   </section>
 
-  <section class='row content'>
-    <h2>Avatar <span class='light-font'>Image and Initials</span></h2>
+  <section class='row'>
+    <h2>Form <span class='light-font'>Fields</span></h2>
+    <m-text-field value="Valor do campo"></m-text-field>
+    <m-text-field placeholder="Buscar" type="search"></m-text-field>
+    <m-text-field placeholder="Desabilitado" disabled></m-text-field>
+    <m-text-field value="Invalido" valid="false"></m-text-field>
+  </section>
+
+  <section class="row content">
+    <h2>Avatar <span class="light-font">Image and Initials</span></h2>
     <m-avatar source="https://cms.qz.com/wp-content/uploads/2018/12/earring2.png" data-alt="Alternative description"></m-avatar>
-    <m-avatar source="https://cms.qz.com/wp-content/uploads/2018/12" data-alt="Invalid image ULR"></m-avatar>
     <m-avatar source="Mary Smith Montgomery"></m-avatar>
   </section>
 
@@ -132,7 +162,7 @@
       <span><m-icon type="regular" name="x-large"></m-icon><span>x-large</span></span>
     </div>
 
-    <h2>Icons <span class='light-font'>Filled</span></h2>
+    <h2>Icons <span class="light-font">Filled</span></h2>
     <div class="content-icons__group">
       <span><m-icon type="filled" name="calendar"></m-icon><span>calendar</span></span>
       <span><m-icon type="filled" name="camera"></m-icon><span>camera</span></span>
@@ -177,17 +207,20 @@
     </div>
   </section>
 
-  <section class='row'>
-    <h2>Footer <span class='light-font'>Block</span></h2>
+  <section class="row">
+    <h2>Footer <span class="light-font">Block</span></h2>
     <m-footer type="block">Lorem</m-footer>
-    <h2>Footer <span class='light-font'>Line</span></h2>
+    <h2>Footer <span class="light-font">Line</span></h2>
     <m-footer type="line">Lorem</m-footer>
   </section>
 
   <script>
-    const myTable = document.querySelector('m-table');
+    const myTable = document.querySelector('m-table'), myNavbarInsideHeader = document.querySelector('m-navbar');
+    // Table data
     myTable.data = [{id: '01', name: 'Pedro', job: 'Coelho' }, {id: '02', name: 'Patrick', job: 'Estrela' }];
     myTable.dataHeaders = [{title: 'ID', key: 'id'}, {title: 'Name', key: 'name'}, {title: 'Job', key: 'job'},];
+    // Navbar (inside Header) data
+    myNavbarInsideHeader.navItems = ['<a href="index.html">Link 1</a>', '<a href="index.html">Link 2</a>','<a href="index.html">Link 3</a>', '<a href="index.html">Link 4</a>'];
   </script>
 </body>
 </html>
