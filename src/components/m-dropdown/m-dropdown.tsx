@@ -20,11 +20,11 @@ export class Dropdown {
 
   render() {
     return (
-      <div class="dropdown">
+      <div class="m-dropdown">
         <m-button onClick={(event: UIEvent) => this.handleClick(event)}>
           {this.label}  <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} />
         </m-button>
-        <div class={'dropdown__content ' + (this.open ? 'dropdown__content--show' : '')}>
+        <div class={'m-dropdown__content ' + (this.open ? 'm-dropdown__content--show' : '')}>
           <ul class="list-items" onClick={(event: UIEvent) => this.handleClick(event)}>
             <slot/>
           </ul>
