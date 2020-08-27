@@ -59,6 +59,10 @@ export namespace Components {
           * Icon tooltip
          */
         "tooltip": string;
+        /**
+          * The icon style: regular, bold and filled
+         */
+        "type": string;
     }
     interface MNavbar {
         /**
@@ -264,6 +268,10 @@ declare namespace LocalJSX {
           * Icon tooltip
          */
         "tooltip"?: string;
+        /**
+          * The icon style: regular, bold and filled
+         */
+        "type"?: string;
     }
     interface MNavbar {
         /**

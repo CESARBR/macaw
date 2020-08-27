@@ -14,6 +14,11 @@ export class Icon {
   @Prop() name: string;
 
   /**
+   * The icon style: regular, bold and filled
+   */
+  @Prop() type: string;
+
+  /**
    * The svg icon as string
    */
   @State() svg: string;
@@ -27,7 +32,7 @@ export class Icon {
    * Function to fetch svg code
    */
   async connectedCallback() {
-    const path = getAssetPath(`icons/${this.name}.svg`)
+    const path = getAssetPath(`icons/${this.type}/${this.name}.svg`)
     const response = await fetch(path)
     this.svg = await response.text()
   }
@@ -36,5 +41,5 @@ export class Icon {
     return (
       <span innerHTML={this.svg} class={'m-icon i-' + this.name} title={this.tooltip}/>
     );
-  }
+  } 
 }
