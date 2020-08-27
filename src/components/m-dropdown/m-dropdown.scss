@@ -1,20 +1,63 @@
 .dropdown {
   position: relative;
+
   &__content {
     position: absolute;
     background-color: $white;
     left: 0;
     z-index: 900;
     margin: 4px 0 0;
-    // display: none;
-    border: 1px solid rgba(0,0,0,.15);
+    display: none;
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    &--show {
+      display: block;
+    }
   }
+
   .list-items {
-    min-width: 140px;
+    min-width: 100px;
     padding: 8px 0;
     list-style: none;
     text-align: left;
     margin: 0;
+  }
+
+  .icon {
+    position: relative;
+    width: 3px;
+    height: 7px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right: 4px;
+
+    &:before,
+    &:after {
+      content: "";
+      transition: all 0.25s ease-in-out;
+      position: absolute;
+      background-color: $white;
+      width: 1px;
+      height: 6px;
+    }
+
+    &:before {
+      transform: translate(-2px, 0) rotate(45deg);
+    }
+
+    &:after {
+      transform: translate(2px, 0) rotate(-45deg);
+    }
+
+    &--closed {
+      &:before {
+        transform: translate(2px, 0) rotate(45deg);
+      }
+
+      &:after {
+        transform: translate(-2px, 0) rotate(-45deg);
+      }
+    }
   }
 }
