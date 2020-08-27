@@ -16,7 +16,7 @@ export class Icon {
   /**
    * The icon style: regular, bold and filled
    */
-  @Prop() type: string;
+  @Prop() type: string = 'regular';
 
   /**
    * The svg icon as string
