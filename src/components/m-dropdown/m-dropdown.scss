@@ -22,42 +22,34 @@
     list-style: none;
     text-align: left;
     margin: 0;
+    
   }
 
   .icon {
-    position: relative;
-    width: 3px;
-    height: 7px;
-    display: inline-block;
     margin-left: 8px;
-    margin-right: 4px;
-
-    &:before,
-    &:after {
-      content: "";
-      transition: all 0.25s ease-in-out;
-      position: absolute;
-      background-color: $white;
-      width: 1px;
-      height: 6px;
+    .m-icon {
+      animation: chevron-up 0.3s forwards;
     }
-
-    &:before {
-      transform: translate(-2px, 0) rotate(45deg);
-    }
-
-    &:after {
-      transform: translate(2px, 0) rotate(-45deg);
-    }
-
     &--closed {
-      &:before {
-        transform: translate(2px, 0) rotate(45deg);
-      }
-
-      &:after {
-        transform: translate(-2px, 0) rotate(-45deg);
+      .m-icon {
+        animation: chevron-down 0.3s forwards;
       }
     }
+  }
+
+  
+}
+@keyframes chevron-down {
+  from {
+    transform: scaleY(-1);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes chevron-up {
+  to {
+    transform: scaleY(-1);
   }
 }
