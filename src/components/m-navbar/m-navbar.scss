@@ -15,10 +15,24 @@
     position: relative;
     border-radius: $default-border-radius;
 
+    button {
+      color: $gray;
+    }
+
     a {
       display: inline-block;
       margin: 7px 12px;
       text-decoration: none;
+
+      &:link,
+      &:visited,
+      &:hover {
+        color: $gray;
+      }
+
+      &:active {
+        color: $orange;
+      }
     }
   }
 
@@ -29,17 +43,6 @@
       .m-header & {
         background: darken($ice, 5%);
       }
-    }
-
-    a:link,
-    a:visited,
-    a:hover,
-    button {
-      color: $gray;
-    }
-
-    a:active {
-      color: $orange;
     }
   }
 
