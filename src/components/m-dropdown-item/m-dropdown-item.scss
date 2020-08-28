@@ -1,7 +1,13 @@
 .m-dropdown-item {
   padding: 8px;
   cursor: pointer;
+
   &:hover {
-    background: $frost;
+    background: $ice;
+  }
+
+  a {
+    color: $gray;
+    text-decoration: none;
   }
 }
