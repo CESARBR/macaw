@@ -31,9 +31,15 @@
       }
     }
 
+    a:link,
     a:visited,
+    a:hover,
     button {
       color: $gray;
+    }
+
+    a:active {
+      color: $orange;
     }
   }
 
