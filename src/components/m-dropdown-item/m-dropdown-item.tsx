@@ -1,4 +1,4 @@
-import { Component, Prop, h, Listen, Method } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'm-dropdown-item',
