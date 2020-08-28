@@ -3,7 +3,7 @@ import { Component, Prop, h, Listen, Method } from '@stencil/core';
 @Component({
   tag: 'm-dropdown-item',
   styleUrl: 'm-dropdown-item.scss',
-  shadow: true,
+  shadow: false,
 })
 export class Item {
 
