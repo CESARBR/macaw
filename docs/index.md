@@ -31,9 +31,11 @@ Para auxiliar com a construção e compilação desses componentes, também esta
 
 ### Via tag de script
 
-<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>
-
-1. Adicione a tag script `<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>` logo antes do fechamento da tag `<head>`;
+1. Adicione as tags script, abaixo, logo antes do fechamento da tag `<head>`;
+```html
+<script type="module" src="https://unpkg.com/@cesarbr/macaw/dist/macaw/macaw.esm.js"></script>
+<script nomodule src="https://unpkg.com/@cesarbr/macaw/dist/macaw/macaw.js"></script>
+```
 2. Agora você pode usar qualquer componente em seus templates, JSX, html e etc.
 
 ### Via NPM

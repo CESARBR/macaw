@@ -17,7 +17,7 @@ O `m-dropdown` é o menu dropdown acompanhado por um `m-button`.
     First Item
   </m-dropdown-item>
   <m-dropdown-item>
-    <a href="">Second Item</a>
+    <a href="http://">Second Item <m-icon name="check" /></a>
   </m-dropdown-item>
 </m-dropdown>
 
@@ -28,7 +28,7 @@ O `m-dropdown` é o menu dropdown acompanhado por um `m-button`.
     First Item
   </m-dropdown-item>
   <m-dropdown-item>
-    <a href="">Second Item</a>
+    <a href="">Second Item <m-icon name="check" /></a>
   </m-dropdown-item>
 </m-dropdown>
 ```

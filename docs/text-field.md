@@ -13,16 +13,16 @@ O `m-text-field` é campo de texto do Macaw. Ele já vem com padrão de tratamen
 ## Exemplo
 
 <m-text-field value="Valor do campo"></m-text-field>
-<m-text-field placeholder="Buscar" type="search"></m-text-field>
 <m-text-field placeholder="Desabilitado" disabled></m-text-field>
 <m-text-field value="Invalido" valid="false"></m-text-field>
+<m-text-field placeholder="Buscar" type="search"></m-text-field>
 
 #### HTML
 ```html
 <m-text-field value="Valor do campo"></m-text-field>
-<m-text-field placeholder="Buscar" type="search"></m-text-field>
 <m-text-field placeholder="Desabilitado" disabled></m-text-field>
 <m-text-field value="Invalido" valid="false"></m-text-field>
+<m-text-field placeholder="Buscar" type="search"></m-text-field>
 ```
 
 ## Propriedades
