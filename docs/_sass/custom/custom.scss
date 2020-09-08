@@ -27,7 +27,7 @@ $btn-primary-color: $macaw-primary-color;
     color: $macaw-grey-700;
     padding: 8px 12px;
     transition: background-color .3s, color .3s;
-  
+
     &:hover {
       background-color: darken($macaw-grey-300, 5);
     }
@@ -36,5 +36,30 @@ $btn-primary-color: $macaw-primary-color;
       color: $macaw-primary-color;
       font-weight: 400;
     }
+  }
+}
+
+[class*="m-"] {
+  font-size: 14px;
+  line-height: 1.15;
+}
+
+.m-text-field {
+  display: block;
+  margin: 0 0 16px;
+
+  &__field,
+  &__field[type="search"] {
+    box-sizing: border-box;
+    width: 240px;
+  }
+}
+
+.m-dropdown-item {
+  margin: 0;
+
+  a:not([class]),
+  a:not([class]):hover {
+    background-image: none;
   }
 }
