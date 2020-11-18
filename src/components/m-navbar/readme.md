@@ -1,6 +1,6 @@
-# m-avatar
+# m-navbar
 
-This is a magic avatar or not ;)
+This is a magic navbar or not ;)
 
 
 <!-- Auto Generated Below -->
