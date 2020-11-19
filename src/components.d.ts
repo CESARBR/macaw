@@ -29,12 +29,28 @@ export namespace Components {
           * Button tooltip
          */
         "tooltip": string;
+        /**
+          * Button type. "text" or "primary"
+         */
+        "type": string;
     }
     interface MDropdown {
+        /**
+          * The logged user's avatar image URL or user name.
+         */
+        "avatarSource": string;
         /**
           * Dropdown label
          */
         "label": string;
+        /**
+          * Weither to display the chevron icon or not
+         */
+        "showChevron": boolean;
+        /**
+          * Dropdown button type. "text" or "primary"
+         */
+        "type": string;
     }
     interface MDropdownItem {
     }
@@ -260,12 +276,28 @@ declare namespace LocalJSX {
           * Button tooltip
          */
         "tooltip"?: string;
+        /**
+          * Button type. "text" or "primary"
+         */
+        "type"?: string;
     }
     interface MDropdown {
+        /**
+          * The logged user's avatar image URL or user name.
+         */
+        "avatarSource"?: string;
         /**
           * Dropdown label
          */
         "label"?: string;
+        /**
+          * Weither to display the chevron icon or not
+         */
+        "showChevron"?: boolean;
+        /**
+          * Dropdown button type. "text" or "primary"
+         */
+        "type"?: string;
     }
     interface MDropdownItem {
     }

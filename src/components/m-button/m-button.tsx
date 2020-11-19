@@ -8,6 +8,10 @@ import { Component, Prop, h, Listen, Method } from '@stencil/core';
 export class Button {
 
   /**
+   * Button type. "text" or "primary"
+   */
+  @Prop({ reflect: true }) type: string = 'primary';
+  /**
    * Button tooltip
    */
   @Prop({ attribute: 'title' }) tooltip: string;
@@ -37,7 +41,12 @@ export class Button {
 
   render() {
     return (
-      <button title={this.tooltip} disabled={this.disabled}><slot /></button>
+      <button
+        title={this.tooltip}
+        disabled={this.disabled}
+        class={'m-button m-button--' + this.type}>
+          <slot />
+      </button>
     );
   }
 }
