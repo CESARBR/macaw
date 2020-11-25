@@ -3,8 +3,7 @@ import { Component, h, Prop, State } from '@stencil/core';
 @Component({
   tag: 'm-menu-apps',
   styleUrl: 'm-menu-apps.scss',
-  shadow: false,
-  assetsDirs: ['icons']
+  shadow: false
 })
 
 export class MenuApps {
