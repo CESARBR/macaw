@@ -32,6 +32,24 @@ O `m-navbar` é o componente de navegação horizontal do Macaw.
 </style>
 <m-navbar></m-navbar>
 
+<m-navbar>
+  <m-navbar-item active="true">
+    <a href="index.html">Link 1</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 2</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 3</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 4</a>
+  </m-navbar-item>
+  <m-navbar-item>
+    <a href="index.html">Link 5</a>
+  </m-navbar-item>
+</m-navbar>
+
 <script>
     const myNavbarInsideHeader = document.querySelector('m-navbar');
     myNavbarInsideHeader.navItems = ['<a href="index.html">Link 1</a>', '<a href="index.html">Link 2</a>','<a href="index.html">Link 3</a>', '<a href="index.html">Link 4</a>'];

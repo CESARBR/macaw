@@ -10,154 +10,171 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MAvatar {
-    /**
-    * Alternative description.
-    */
-    'altDesc': string;
-    /**
-    * Image URL or user name.
-    */
-    'source': string;
-  }
-  interface MButton {
-    /**
-    * Disable button
-    */
-    'disabled': boolean;
-    /**
-    * Method showPrompt
-    */
-    'myTip': () => Promise<string>;
-    /**
-    * Button tooltip
-    */
-    'tooltip': string;
-  }
-  interface MDropdown {
-    /**
-    * Dropdown label
-    */
-    'label': string;
-  }
-  interface MDropdownItem {}
-  interface MFooter {
-    /**
-    * Footer class
-    */
-    'footerType': string;
-  }
-  interface MHeader {
-    /**
-    * /**  The logged user's name
-    */
-    'avatarName': string;
-    /**
-    * /**  The logged user's avatar image URL or user name.
-    */
-    'avatarSource': string;
-    /**
-    * Brand name
-    */
-    'brandName': string;
-  }
-  interface MIcon {
-    /**
-    * The icon name
-    */
-    'name': string;
-    /**
-    * Icon tooltip
-    */
-    'tooltip': string;
-    /**
-    * The icon style: regular, bold and filled
-    */
-    'type': string;
-  }
-  interface MMenuApps {
-    /**
-    * Alternative description.
-    */
-    'altDesc': string;
-    /**
-    * Menu Item items data.
-    */
-    'menuItems': [];
-  }
-  interface MMenuAppsItem {}
-  interface MNavbar {
-    /**
-    * Whether item is active.
-    */
-    'active': boolean;
-    /**
-    * Navbar items.
-    */
-    'navItems': [];
-    /**
-    * Index of selected Navbar item.
-    */
-    'selectedIndex': number;
-  }
-  interface MNavbarItem {
-    /**
-    * Whether item is active.
-    */
-    'active': boolean;
-  }
-  interface MTable {
-    /**
-    * Data Table
-    */
-    'data': [];
-    /**
-    * Table Headers
-    */
-    'dataHeaders': [];
-    /**
-    * Table Strip
-    */
-    'strip': boolean;
-  }
-  interface MTbody {
-    /**
-    * Table Body
-    */
-    'body': [];
-    /**
-    * Table Header
-    */
-    'header': [];
-  }
-  interface MTextField {
-    /**
-    * Disable field
-    */
-    'disabled': boolean;
-    /**
-    * Field placeholder
-    */
-    'placeholder': string;
-    /**
-    * Type field
-    */
-    'type': string;
-    /**
-    * Field validation status
-    */
-    'valid': boolean;
-    /**
-    * Field value
-    */
-    'value': string;
-  }
-  interface MThead {
-    /**
-    * Table Header
-    */
-    'header': [];
-  }
+    interface MAvatar {
+        /**
+          * Alternative description.
+         */
+        "altDesc": string;
+        /**
+          * Image URL or user name.
+         */
+        "source": string;
+    }
+    interface MButton {
+        /**
+          * Disable button
+         */
+        "disabled": boolean;
+        /**
+          * Method showPrompt
+         */
+        "myTip": () => Promise<string>;
+        /**
+          * Button tooltip
+         */
+        "tooltip": string;
+        /**
+          * Button type. "text" or "primary"
+         */
+        "type": string;
+    }
+    interface MDropdown {
+        /**
+          * The logged user's avatar image URL or user name.
+         */
+        "avatarSource": string;
+        /**
+          * Dropdown label
+         */
+        "label": string;
+        /**
+          * Weither to display the chevron icon or not
+         */
+        "showChevron": boolean;
+        /**
+          * Dropdown button type. "text" or "primary"
+         */
+        "type": string;
+    }
+    interface MDropdownItem {
+    }
+    interface MFooter {
+        /**
+          * Footer class
+         */
+        "footerType": string;
+    }
+    interface MHeader {
+        /**
+          * /**  The logged user's name
+         */
+        "avatarName": string;
+        /**
+          * /**  The logged user's avatar image URL or user name.
+         */
+        "avatarSource": string;
+        /**
+          * Brand name
+         */
+        "brandName": string;
+    }
+    interface MIcon {
+        /**
+          * The icon name
+         */
+        "name": string;
+        /**
+          * Icon tooltip
+         */
+        "tooltip": string;
+        /**
+          * The icon style: regular, bold and filled
+         */
+        "type": string;
+    }
+    interface MMenuApps {
+      /**
+      * Alternative description.
+      */
+      'altDesc': string;
+      /**
+      * Menu Item items data.
+      */
+      'menuItems': [];
+    }
+    interface MMenuAppsItem {}
+    interface MNavbar {
+        /**
+          * Whether item is active.
+         */
+        "active": boolean;
+        /**
+          * Navbar items.
+         */
+        "navItems": [];
+        /**
+          * Index of selected Navbar item.
+         */
+        "selectedIndex": number;
+    }
+    interface MNavbarItem {
+        /**
+          * Whether item is active.
+         */
+        "active": boolean;
+    }
+    interface MTable {
+        /**
+          * Data Table
+         */
+        "data": [];
+        /**
+          * Table Headers
+         */
+        "dataHeaders": [];
+        /**
+          * Table Strip
+         */
+        "strip": boolean;
+    }
+    interface MTbody {
+        /**
+          * Table Body
+         */
+        "body": [];
+        /**
+          * Table Header
+         */
+        "header": [];
+    }
+    interface MTextField {
+        /**
+          * Disable field
+         */
+        "disabled": boolean;
+        /**
+          * Field placeholder
+         */
+        "placeholder": string;
+        /**
+          * Type field
+         */
+        "type": string;
+        /**
+          * Field validation status
+         */
+        "valid": boolean;
+        /**
+          * Field value
+         */
+        "value": string;
+    }
+    interface MThead {
+        /**
+          * Table Header
+         */
+        "header": [];
+    }
 }
 
 declare global {
@@ -272,168 +289,184 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface MAvatar {
-    /**
-    * Alternative description.
-    */
-    'altDesc'?: string;
-    /**
-    * Image URL or user name.
-    */
-    'source'?: string;
-  }
-  interface MButton {
-    /**
-    * Disable button
-    */
-    'disabled'?: boolean;
-    /**
-    * Button tooltip
-    */
-    'tooltip'?: string;
-  }
-  interface MDropdown {
-    /**
-    * Dropdown label
-    */
-    'label'?: string;
-  }
-  interface MDropdownItem {}
-  interface MFooter {
-    /**
-    * Footer class
-    */
-    'footerType'?: string;
-  }
-  interface MHeader {
-    /**
-    * /**  The logged user's name
-    */
-    'avatarName'?: string;
-    /**
-    * /**  The logged user's avatar image URL or user name.
-    */
-    'avatarSource'?: string;
-    /**
-    * Brand name
-    */
-    'brandName'?: string;
-  }
-  interface MIcon {
-    /**
-    * The icon name
-    */
-    'name'?: string;
-    /**
-    * Icon tooltip
-    */
-    'tooltip'?: string;
-    /**
-    * The icon style: regular, bold and filled
-    */
-    'type'?: string;
-  }
-  interface MMenuApps {
-    /**
-    * Alternative description.
-    */
-    'altDesc'?: string;
-    /**
-    * Menu Item items data.
-    */
-    'menuItems'?: [];
-  }
-  interface MMenuAppsItem {}
-  interface MNavbar {
-    /**
-    * Whether item is active.
-    */
-    'active'?: boolean;
-    /**
-    * Navbar items.
-    */
-    'navItems'?: [];
-    /**
-    * Index of selected Navbar item.
-    */
-    'selectedIndex'?: number;
-  }
-  interface MNavbarItem {
-    /**
-    * Whether item is active.
-    */
-    'active'?: boolean;
-  }
-  interface MTable {
-    /**
-    * Data Table
-    */
-    'data'?: [];
-    /**
-    * Table Headers
-    */
-    'dataHeaders'?: [];
-    /**
-    * Table Strip
-    */
-    'strip'?: boolean;
-  }
-  interface MTbody {
-    /**
-    * Table Body
-    */
-    'body'?: [];
-    /**
-    * Table Header
-    */
-    'header'?: [];
-  }
-  interface MTextField {
-    /**
-    * Disable field
-    */
-    'disabled'?: boolean;
-    /**
-    * Field placeholder
-    */
-    'placeholder'?: string;
-    /**
-    * Type field
-    */
-    'type'?: string;
-    /**
-    * Field validation status
-    */
-    'valid'?: boolean;
-    /**
-    * Field value
-    */
-    'value'?: string;
-  }
-  interface MThead {
-    /**
-    * Table Header
-    */
-    'header'?: [];
-  }
-
-  interface IntrinsicElements {
-    'm-avatar': MAvatar;
-    'm-button': MButton;
-    'm-dropdown': MDropdown;
-    'm-dropdown-item': MDropdownItem;
-    'm-footer': MFooter;
-    'm-header': MHeader;
-    'm-icon': MIcon;
-    'm-menu-apps': MMenuApps;
-    'm-menu-apps-item': MMenuAppsItem;
-    'm-navbar': MNavbar;
-    'm-navbar-item': MNavbarItem;
-    'm-table': MTable;
-    'm-tbody': MTbody;
-    'm-text-field': MTextField;
-    'm-thead': MThead;
-  }
+    interface MAvatar {
+        /**
+          * Alternative description.
+         */
+        "altDesc"?: string;
+        /**
+          * Image URL or user name.
+         */
+        "source"?: string;
+    }
+    interface MButton {
+        /**
+          * Disable button
+         */
+        "disabled"?: boolean;
+        /**
+          * Button tooltip
+         */
+        "tooltip"?: string;
+        /**
+          * Button type. "text" or "primary"
+         */
+        "type"?: string;
+    }
+    interface MDropdown {
+        /**
+          * The logged user's avatar image URL or user name.
+         */
+        "avatarSource"?: string;
+        /**
+          * Dropdown label
+         */
+        "label"?: string;
+        /**
+          * Weither to display the chevron icon or not
+         */
+        "showChevron"?: boolean;
+        /**
+          * Dropdown button type. "text" or "primary"
+         */
+        "type"?: string;
+    }
+    interface MDropdownItem {
+    }
+    interface MFooter {
+        /**
+          * Footer class
+         */
+        "footerType"?: string;
+    }
+    interface MHeader {
+        /**
+          * /**  The logged user's name
+         */
+        "avatarName"?: string;
+        /**
+          * /**  The logged user's avatar image URL or user name.
+         */
+        "avatarSource"?: string;
+        /**
+          * Brand name
+         */
+        "brandName"?: string;
+    }
+    interface MIcon {
+        /**
+          * The icon name
+         */
+        "name"?: string;
+        /**
+          * Icon tooltip
+         */
+        "tooltip"?: string;
+        /**
+          * The icon style: regular, bold and filled
+         */
+        "type"?: string;
+    }
+    interface MMenuApps {
+      /**
+      * Alternative description.
+      */
+      'altDesc'?: string;
+      /**
+      * Menu Item items data.
+      */
+      'menuItems'?: [];
+    }
+    interface MMenuAppsItem {}
+    interface MNavbar {
+        /**
+          * Whether item is active.
+         */
+        "active"?: boolean;
+        /**
+          * Navbar items.
+         */
+        "navItems"?: [];
+        /**
+          * Index of selected Navbar item.
+         */
+        "selectedIndex"?: number;
+    }
+    interface MNavbarItem {
+        /**
+          * Whether item is active.
+         */
+        "active"?: boolean;
+    }
+    interface MTable {
+        /**
+          * Data Table
+         */
+        "data"?: [];
+        /**
+          * Table Headers
+         */
+        "dataHeaders"?: [];
+        /**
+          * Table Strip
+         */
+        "strip"?: boolean;
+    }
+    interface MTbody {
+        /**
+          * Table Body
+         */
+        "body"?: [];
+        /**
+          * Table Header
+         */
+        "header"?: [];
+    }
+    interface MTextField {
+        /**
+          * Disable field
+         */
+        "disabled"?: boolean;
+        /**
+          * Field placeholder
+         */
+        "placeholder"?: string;
+        /**
+          * Type field
+         */
+        "type"?: string;
+        /**
+          * Field validation status
+         */
+        "valid"?: boolean;
+        /**
+          * Field value
+         */
+        "value"?: string;
+    }
+    interface MThead {
+        /**
+          * Table Header
+         */
+        "header"?: [];
+    }
+    interface IntrinsicElements {
+        "m-avatar": MAvatar;
+        "m-button": MButton;
+        "m-dropdown": MDropdown;
+        "m-dropdown-item": MDropdownItem;
+        "m-footer": MFooter;
+        "m-header": MHeader;
+        "m-icon": MIcon;
+        "m-menu-apps": MMenuApps;
+        "m-menu-apps-item": MMenuAppsItem;
+        "m-navbar": MNavbar;
+        "m-navbar-item": MNavbarItem;
+        "m-table": MTable;
+        "m-tbody": MTbody;
+        "m-text-field": MTextField;
+        "m-thead": MThead;
+    }
 }
 
 export { LocalJSX as JSX };

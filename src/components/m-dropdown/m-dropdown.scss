@@ -1,4 +1,5 @@
 .m-dropdown {
+  display: inline-block;
   position: relative;
 
   &__content {
@@ -13,6 +14,7 @@
 
     &--show {
       display: block;
+      width: max-content;
     }
   }
 
