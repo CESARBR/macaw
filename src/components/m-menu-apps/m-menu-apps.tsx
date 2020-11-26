@@ -19,31 +19,21 @@ export class MenuApps {
   @State() open: boolean;
 
   /**
-  * State of menu (opened or closed)
-  */
-  handleClick() {
-    this.open = !this.open;
-  }
-
-  /**
    * Menu Item items data.
    */
   @Prop() menuItems: [];
 
   render() {
     return (
-      <div class="m-menu-apps" onClick={() => this.handleClick()}>
-        <button class="m-menu-apps__button">
-        <m-icon type="core" name="menu-apps-icon"></m-icon>
-        </button>
-        <div class={'m-menu-apps__content ' + (this.open ? 'm-menu-apps__content--show' : '')}  onClick={() => this.handleClick()}>
+      <div class="m-menu-apps">
+        <m-dropdown type="text" icon="menu-apps-icon" iconType="core" show-chevron="false">
           {this.menuItems ? 
             this.menuItems.map((item, index) =>
             <m-menu-apps-item innerHTML={item}></m-menu-apps-item>
             )
             : <slot />
           }
-        </div>
+        </m-dropdown>
       </div>
     )
   }

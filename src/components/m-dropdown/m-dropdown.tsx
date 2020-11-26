@@ -13,9 +13,19 @@ export class Dropdown {
   @Prop() avatarSource: string;
 
   /**
-   * Weither to display the chevron icon or not
+   * Whether to display the chevron icon or not
    */
   @Prop({ mutable: true }) showChevron: boolean = true;
+
+  /**
+   * Icon to display
+   */
+  @Prop({ attribute: 'icon' }) icon: string;
+
+  /**
+   * Icon type to display
+   */
+  @Prop({ attribute: 'iconType' }) iconType: string;
 
   /**
    * Dropdown button type. "text" or "primary"
@@ -28,7 +38,7 @@ export class Dropdown {
   @Prop({ attribute: 'label' }) label: string;
 
   /**
-   * Weither if the dropdown is open or not
+   * Whether the dropdown is open or not
    */
   @State() open: boolean;
 
@@ -41,8 +51,9 @@ export class Dropdown {
       <div class="m-dropdown">
         <m-button type={this.type} onClick={() => this.handleClick()}>
           {this.avatarSource ? <m-avatar source={this.avatarSource} ></m-avatar> : ""}
-          {this.label} 
-          {this.showChevron ?  <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : ""}
+          {this.label}
+          {this.icon ? <m-icon type={this.iconType} name={this.icon} /> : ""}
+          {this.showChevron ? <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : ""}
         </m-button>
         <div class={'m-dropdown__content ' + (this.open ? 'm-dropdown__content--show' : '')}>
           <ul class="list-items" onClick={() => this.handleClick()}>
