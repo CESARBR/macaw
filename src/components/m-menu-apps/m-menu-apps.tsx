@@ -9,9 +9,9 @@ import { Component, h, Prop, State } from '@stencil/core';
 export class MenuApps {
 
   /**
-  * Alternative description.
-  */
-  @Prop({ attribute: 'alt' }) altDesc: string;
+   * Menu label
+   */
+  @Prop({ attribute: 'menuAppsLabel' }) menuAppsLabel: string;
 
   /**
   * State of menu (opened or closed)
@@ -21,14 +21,14 @@ export class MenuApps {
   /**
    * Menu Item items data.
    */
-  @Prop() menuItems: [];
+  @Prop() menuAppsItems: [];
 
   render() {
     return (
-      <div class="m-menu-apps">
-        <m-dropdown type="text" icon="menu-apps-icon" iconType="core" show-chevron="false">
-          {this.menuItems ? 
-            this.menuItems.map((item, index) =>
+      <div class="m-menu-apps" id="menu-apps">
+        <m-dropdown type="text" label={this.menuAppsLabel} show-label="false" icon="menu-apps-icon" iconType="core" show-chevron="false">
+          {this.menuAppsItems ? 
+            this.menuAppsItems.map((item, index) =>
             <m-menu-apps-item innerHTML={item}></m-menu-apps-item>
             )
             : <slot />

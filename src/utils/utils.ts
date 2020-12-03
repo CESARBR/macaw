@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+
 // function below to be removed
 export function format(first: string, middle: string, last: string): string {
   return (
@@ -20,4 +22,11 @@ export function validURL(str: string): boolean {
     '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
     '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
   return !!pattern.test(str);
+}
+
+/**
+ * Generates unique ID property from nanoid library.
+ */
+export function setUniqueID() {
+  return nanoid();
 }

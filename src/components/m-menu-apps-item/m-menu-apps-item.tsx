@@ -9,7 +9,7 @@ import { Component, h } from '@stencil/core';
 export class MenuAppsItem {
   render() {
     return (
-      <li class="m-menu-apps-item">
+      <li class="m-menu-apps-item" role="menuitem">
         <slot/>
       </li>
     )
