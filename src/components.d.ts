@@ -115,6 +115,22 @@ export namespace Components {
         "menuAppsLabel": string;
     }
     interface MMenuAppsItem {
+        /**
+          * Menu item caption
+         */
+        "menuAppsItemCaption": string;
+        /**
+          * Menu item image alternate description
+         */
+        "menuAppsItemImgAlt": string;
+        /**
+          * Menu item image source
+         */
+        "menuAppsItemImgSrc": string;
+        /**
+          * Menu item link
+         */
+        "menuAppsItemLink": string;
     }
     interface MNavbar {
         /**
@@ -404,6 +420,22 @@ declare namespace LocalJSX {
         "menuAppsLabel"?: string;
     }
     interface MMenuAppsItem {
+        /**
+          * Menu item caption
+         */
+        "menuAppsItemCaption"?: string;
+        /**
+          * Menu item image alternate description
+         */
+        "menuAppsItemImgAlt"?: string;
+        /**
+          * Menu item image source
+         */
+        "menuAppsItemImgSrc"?: string;
+        /**
+          * Menu item link
+         */
+        "menuAppsItemLink"?: string;
     }
     interface MNavbar {
         /**

@@ -11,7 +11,7 @@ export class MenuApps {
   /**
    * Menu label
    */
-  @Prop({ attribute: 'menuAppsLabel' }) menuAppsLabel: string;
+  @Prop() menuAppsLabel: string;
 
   /**
   * State of menu (opened or closed)
