@@ -1,5 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
 import { setUniqueID } from '../../utils/utils';
+import { ClickOutside } from "stencil-click-outside";
 
 @Component({
   tag: 'm-dropdown',
@@ -55,6 +56,14 @@ export class Dropdown {
    */
   handleClick() {
     this.open = !this.open;
+  }
+
+  /**
+   * Close menu when click outside
+   */
+  @ClickOutside()
+  closeMenuIfClickOutside() {
+    this.open = false;
   }
 
   /**

@@ -40,7 +40,8 @@
   "devDependencies": {
     "@stencil/core": "1.15.0",
     "@stencil/sass": "^1.1.1",
-    "nanoid": "^3.1.18"
+    "nanoid": "^3.1.18",
+    "stencil-click-outside": "^1.7.1"
   },
   "repository": {
     "type": "git",
