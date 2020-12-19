@@ -106,31 +106,35 @@ export namespace Components {
     }
     interface MMenuApps {
         /**
+          * Menu label
+         */
+        "label": string;
+        /**
           * Menu Item items data.
          */
         "menuAppsItems": [];
         /**
-          * Menu label
+          * Menu label Default type: grid
          */
-        "menuAppsLabel": string;
+        "type": string;
     }
     interface MMenuAppsItem {
         /**
-          * Menu item caption
-         */
-        "menuAppsItemCaption": string;
-        /**
           * Menu item image alternate description
          */
-        "menuAppsItemImgAlt": string;
+        "imgAlt": string;
         /**
           * Menu item image source
          */
-        "menuAppsItemImgSrc": string;
+        "imgSrc": string;
+        /**
+          * Menu item caption
+         */
+        "itemName": string;
         /**
           * Menu item link
          */
-        "menuAppsItemLink": string;
+        "link": string;
     }
     interface MNavbar {
         /**
@@ -411,31 +415,35 @@ declare namespace LocalJSX {
     }
     interface MMenuApps {
         /**
+          * Menu label
+         */
+        "label"?: string;
+        /**
           * Menu Item items data.
          */
         "menuAppsItems"?: [];
         /**
-          * Menu label
+          * Menu label Default type: grid
          */
-        "menuAppsLabel"?: string;
+        "type"?: string;
     }
     interface MMenuAppsItem {
         /**
-          * Menu item caption
-         */
-        "menuAppsItemCaption"?: string;
-        /**
           * Menu item image alternate description
          */
-        "menuAppsItemImgAlt"?: string;
+        "imgAlt"?: string;
         /**
           * Menu item image source
          */
-        "menuAppsItemImgSrc"?: string;
+        "imgSrc"?: string;
+        /**
+          * Menu item caption
+         */
+        "itemName"?: string;
         /**
           * Menu item link
          */
-        "menuAppsItemLink"?: string;
+        "link"?: string;
     }
     interface MNavbar {
         /**

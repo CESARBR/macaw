@@ -17,6 +17,12 @@
     flex-direction: row;
   }
 
+  &__right {
+    > span {
+      display: flex;
+    }
+  }
+
   &__avatar-name {
     margin-left: 10px;
   }

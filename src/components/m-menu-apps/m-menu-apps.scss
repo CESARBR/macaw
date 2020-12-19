@@ -29,11 +29,8 @@
     overflow-y: scroll;
 
     .list-items {
-      display: flex;
-      flex-wrap: wrap;
       padding: 8px 24px;
       min-width: unset;
-      max-width: ($itemWidth + $itemMarginRight) * $itemsPerRow - $itemMarginRight;
 
       hr {
         width: calc(100% + 48px);
@@ -53,5 +50,15 @@
         margin-top: 40px;
       }
     }
+  }
+
+  &.m-menu-apps-grid .m-dropdown__content .list-items {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: ($gridItemWidth + $gridItemMarginRight) * $gridItemsPerRow - $gridItemMarginRight;
+  }
+
+  &.m-menu-apps-list .m-dropdown__content .list-items {
+    width: max-content;
   }
 }

@@ -11,7 +11,13 @@ export class MenuApps {
   /**
    * Menu label
    */
-  @Prop() menuAppsLabel: string;
+  @Prop() label: string;
+
+  /**
+   * Menu label
+   * Default type: grid
+   */
+  @Prop() type: string;
 
   /**
   * State of menu (opened or closed)
@@ -25,8 +31,8 @@ export class MenuApps {
 
   render() {
     return (
-      <div class="m-menu-apps" id="menu-apps">
-        <m-dropdown type="text" label={this.menuAppsLabel} show-label="false" icon="menu-apps-icon" iconType="core" show-chevron="false">
+      <div class={this.type === 'grid' || this.type === undefined ? 'm-menu-apps m-menu-apps-grid' : this.type === 'list' ? 'm-menu-apps m-menu-apps-list' : null}>
+        <m-dropdown type="text" label={this.label} show-label="false" icon="menu-apps-icon" icon-type="core" show-chevron="false">
           {this.menuAppsItems ? 
             this.menuAppsItems.map((item, index) =>
             <m-menu-apps-item innerHTML={item}></m-menu-apps-item>

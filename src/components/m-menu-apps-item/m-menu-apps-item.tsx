@@ -10,33 +10,33 @@ export class MenuAppsItem {
   /**
    * Menu item link
    */
-  @Prop() menuAppsItemLink: string;
+  @Prop() link: string;
 
   /**
    * Menu item image source
    */
-  @Prop() menuAppsItemImgSrc: string;
+  @Prop() imgSrc: string;
 
   /**
    * Menu item image alternate description
    */
-  @Prop() menuAppsItemImgAlt: string;
+  @Prop() imgAlt: string;
 
   /**
    * Menu item caption
    */
-  @Prop() menuAppsItemCaption: string;
+  @Prop() itemName: string;
 
 
   render() {
     return (
       <li class="m-menu-apps-item" role="menuitem">
-        <a href={this.menuAppsItemLink}>
+        <a href={this.link}>
             <figure>
               <span>
-                <img src={this.menuAppsItemImgSrc} alt={this.menuAppsItemImgAlt} />
+                <img src={this.imgSrc} alt={this.imgAlt} />
               </span>
-              <figcaption innerHTML={this.menuAppsItemCaption}></figcaption>
+              <figcaption innerHTML={this.itemName}></figcaption>
             </figure>
           </a>
       </li>

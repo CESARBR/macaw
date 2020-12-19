@@ -1,19 +1,11 @@
 m-menu-apps-item {
-  margin-right: $itemMarginRight;
-  margin-bottom: 8px;
-  height: 98px;
-
   .m-menu-apps-item {
     cursor: pointer;
-    text-align: center;
-    width: $itemWidth;
-    border-radius: 5px;
   }
-
+  
   a {
     color: $gray;
     text-decoration: none;
-    display: inline-block;
     margin: 10px;
   }
 
@@ -22,40 +14,78 @@ m-menu-apps-item {
     padding: 0;
 
     span {
-      display: flex;  
+      display: flex;
       align-items: center;
-      width: 56px;
-      height: 56px;
-      margin: 0 auto;
 
       img {
         width: 100%;
         height: auto;
       }
     }
-
-    figcaption {
-      max-width: $itemWidth - 20;
-      font-size: .625rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 
-  &:nth-of-type(4n) {
-    margin-right: 0;
-  }
+  .m-menu-apps-grid .m-dropdown__content .list-items & {
+    margin-right: $gridItemMarginRight;
+    margin-bottom: 8px;
+    height: 98px;
 
-  &:hover {
     .m-menu-apps-item {
-      background: $ice;
+      text-align: center;
+      width: $gridItemWidth;
+      border-radius: 5px;
     }
 
-    figure figcaption {
-      white-space: normal; 
-      overflow: visible;
-      text-overflow: unset;
+    a {
+      display: inline-block;
+    }
+
+    figure {
+      span {
+        margin: 0 auto;
+        width: 56px;
+        height: 56px;
+      }
+
+      figcaption {
+        font-size: .625rem;
+        max-width: $gridItemWidth - 20;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &:nth-of-type(#{$gridItemsPerRow}n) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .m-menu-apps-item {
+        background: $ice;
+      }
+
+      figure figcaption {
+        white-space: normal; 
+        overflow: visible;
+        text-overflow: unset;
+      }
+    }
+  }
+
+  .m-menu-apps-list .m-dropdown__content .list-items & {
+    figure {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 8px;
+        width: 32px;
+        height: 32px;
+      }
+
+      figcaption {
+        font-size: 0.875rem;
+      }
     }
   }
 }

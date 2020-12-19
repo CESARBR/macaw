@@ -22,12 +22,12 @@ export class Dropdown {
   /**
    * Icon to display
    */
-  @Prop({ attribute: 'icon' }) icon: string;
+  @Prop() icon: string;
 
   /**
    * Icon type to display
    */
-  @Prop({ attribute: 'iconType' }) iconType: string;
+  @Prop() iconType: string;
 
   /**
    * Dropdown button type. "text" or "primary"
@@ -37,7 +37,7 @@ export class Dropdown {
   /**
    * Dropdown label
    */
-  @Prop({ attribute: 'label' }) label: string;
+  @Prop() label: string;
 
   /**
    * Whether to display the button label or not. In case of using image or icon
