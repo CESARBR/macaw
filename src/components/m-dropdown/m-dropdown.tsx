@@ -1,6 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
 import { setUniqueID } from '../../utils/utils';
-import { ClickOutside } from "stencil-click-outside";
+import { ClickOutside } from 'stencil-click-outside';
 
 @Component({
   tag: 'm-dropdown',
@@ -77,8 +77,8 @@ export class Dropdown {
         <m-button type={this.type} onClick={() => this.handleClick()} id={this.dropdownButtonID}>
           {this.avatarSource ? <m-avatar source={this.avatarSource} ></m-avatar> : ''}
           <span class={!this.showLabel ? 'm-dropdown__invisible-label' : null}>{!this.label ? 'Menu Dropdown' : this.label}</span>
-          {this.icon ? <m-icon type={this.iconType} name={this.icon} /> : ""}
-          {this.showChevron ? <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : ""}
+          {this.icon ? <m-icon type={this.iconType} name={this.icon} /> : null}
+          {this.showChevron ? <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : null}
         </m-button>
         <div class={'m-dropdown__content ' + (this.open ? 'm-dropdown__content--show' : '')}>
           <ul class="list-items" onClick={() => this.handleClick()} aria-labelledby={this.dropdownButtonID}>

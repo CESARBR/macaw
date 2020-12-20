@@ -68,7 +68,7 @@ JavaScript
 const myNavbar = document.querySelector('m-navbar');
 // Passe um array de itens HTML para a propriedade pública navItems.
 myNavbar.navItems = ['<a href="index.html">Link 1</a>', '<a href="index.html">Link 2</a>','<a href="index.html">Link 3</a>', '<a href="index.html">Link 4</a>'];
-myNavbar.selected-index = 4;
+myNavbar.selectedIndex = 4;
 ```
 
 ### 2. Declarativa
@@ -99,7 +99,7 @@ HTML
 |-----------------|------------------|----------------------------|-----------|-------------|
 | `active`        | `active`         | Se o item está ativo       | `boolean` | `undefined` |
 | `navItems`      | --               | Items da navbar            | `[]`      | `undefined` |
-| `selectedIndex` | `selected-index` | Índice do item selecionado | `number`  | `0`         |
+| `selectedIndex` | `selectedIndex` | Índice do item selecionado | `number`  | `0`         |
 
 
 ## Dependências

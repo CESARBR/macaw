@@ -27,7 +27,6 @@ export class MenuAppsItem {
    */
   @Prop() itemName: string;
 
-
   render() {
     return (
       <li class="m-menu-apps-item" role="menuitem">
@@ -36,7 +35,7 @@ export class MenuAppsItem {
               <span>
                 <img src={this.imgSrc} alt={this.imgAlt} />
               </span>
-              <figcaption innerHTML={this.itemName}></figcaption>
+              <figcaption><slot /></figcaption>
             </figure>
           </a>
       </li>

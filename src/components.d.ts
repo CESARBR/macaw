@@ -112,7 +112,7 @@ export namespace Components {
         /**
           * Menu Item items data.
          */
-        "menuAppsItems": [];
+        "menuItemsJSON": string;
         /**
           * Menu label Default type: grid
          */
@@ -421,7 +421,7 @@ declare namespace LocalJSX {
         /**
           * Menu Item items data.
          */
-        "menuAppsItems"?: [];
+        "menuItemsJSON"?: string;
         /**
           * Menu label Default type: grid
          */

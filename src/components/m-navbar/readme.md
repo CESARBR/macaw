@@ -12,7 +12,7 @@ This is a magic navbar or not ;)
 | --------------- | ---------------- | ------------------------------ | --------- | ----------- |
 | `active`        | `active`         | Whether item is active.        | `boolean` | `undefined` |
 | `navItems`      | --               | Navbar items.                  | `[]`      | `undefined` |
-| `selectedIndex` | `selected-index` | Index of selected Navbar item. | `number`  | `0`         |
+| `selectedIndex` | `selectedIndex` | Index of selected Navbar item. | `number`  | `0`         |
 
 
 ## Dependencies
