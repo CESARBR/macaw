@@ -8,23 +8,25 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property  | Attribute | Description              | Type     | Default     |
-| --------- | --------- | ------------------------ | -------- | ----------- |
-| `altDesc` | `alt`     | Alternative description. | `string` | `undefined` |
-| `source`  | `source`  | Image URL or user name.  | `string` | `undefined` |
+| Property   | Attribute   | Description                           | Type     | Default     |
+| ---------- | ----------- | ------------------------------------- | -------- | ----------- |
+| `imgAlt`   | `img-alt`   | Menu item image alternate description | `string` | `undefined` |
+| `imgSrc`   | `img-src`   | Menu item image source                | `string` | `undefined` |
+| `itemName` | `item-name` | Menu item caption                     | `string` | `undefined` |
+| `link`     | `link`      | Menu item link                        | `string` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [m-header](../m-header)
+ - [m-menu-apps](../m-menu-apps)
 
 ### Graph
 ```mermaid
 graph TD;
-  m-header --> m-avatar
-  style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
+  m-menu-apps --> m-menu-apps-item
+  style m-menu-apps-item fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

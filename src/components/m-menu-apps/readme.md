@@ -1,4 +1,4 @@
-# m-avatar
+# m-menu-apps
 
 This is a magic avatar or not ;)
 
@@ -8,23 +8,29 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property  | Attribute | Description              | Type     | Default     |
-| --------- | --------- | ------------------------ | -------- | ----------- |
-| `altDesc` | `alt`     | Alternative description. | `string` | `undefined` |
-| `source`  | `source`  | Image URL or user name.  | `string` | `undefined` |
+| Property        | Attribute            | Description                   | Type     | Default     |
+| --------------- | -------------------- | ----------------------------- | -------- | ----------- |
+| `label`         | `label`              | Menu label                    | `string` | `undefined` |
+| `menuItemsJSON` | `menu-items-j-s-o-n` | Menu Item items data.         | `string` | `undefined` |
+| `type`          | `type`               | Menu label Default type: grid | `string` | `undefined` |
 
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [m-header](../m-header)
+- [m-menu-apps-item](../m-menu-apps-item)
+- [m-dropdown](../m-dropdown)
 
 ### Graph
 ```mermaid
 graph TD;
-  m-header --> m-avatar
-  style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
+  m-menu-apps --> m-menu-apps-item
+  m-menu-apps --> m-dropdown
+  m-dropdown --> m-button
+  m-dropdown --> m-avatar
+  m-dropdown --> m-icon
+  style m-menu-apps fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

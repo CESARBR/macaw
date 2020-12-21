@@ -8,10 +8,11 @@ This is a magic button or not ;)
 
 ## Properties
 
-| Property   | Attribute  | Description    | Type      | Default     |
-| ---------- | ---------- | -------------- | --------- | ----------- |
-| `disabled` | `disabled` | Disable button | `boolean` | `false`     |
-| `tooltip`  | `title`    | Button tooltip | `string`  | `undefined` |
+| Property   | Attribute  | Description                      | Type      | Default     |
+| ---------- | ---------- | -------------------------------- | --------- | ----------- |
+| `disabled` | `disabled` | Disable button                   | `boolean` | `false`     |
+| `tooltip`  | `title`    | Button tooltip                   | `string`  | `undefined` |
+| `type`     | `type`     | Button type. "text" or "primary" | `string`  | `'primary'` |
 
 
 ## Methods
