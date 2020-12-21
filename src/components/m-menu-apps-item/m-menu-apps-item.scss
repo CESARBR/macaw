@@ -1,12 +1,29 @@
 m-menu-apps-item {
+  margin-top: 8px;
+  display: block;
+
+  &:last-child {
+    .m-menu-apps-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  &:hover {
+    .m-menu-apps-item {
+      background: $ice;
+    }
+  }
+
   .m-menu-apps-item {
     cursor: pointer;
+    border-radius: 5px;
   }
   
   a {
     color: $gray;
     text-decoration: none;
     margin: 10px;
+    display: inline-block;
   }
 
   figure {
@@ -32,7 +49,6 @@ m-menu-apps-item {
     .m-menu-apps-item {
       text-align: center;
       width: $gridItemWidth;
-      border-radius: 5px;
     }
 
     a {
@@ -59,16 +75,10 @@ m-menu-apps-item {
       margin-right: 0;
     }
 
-    &:hover {
-      .m-menu-apps-item {
-        background: $ice;
-      }
-
-      figure figcaption {
-        white-space: normal; 
-        overflow: visible;
-        text-overflow: unset;
-      }
+    &:hover figure figcaption {
+      white-space: normal; 
+      overflow: visible;
+      text-overflow: unset;
     }
   }
 
