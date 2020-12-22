@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Menu Apps Item
-nav_order: 17
+nav_order: 12
 description: ""
 permalink: menu-apps-item/
 ---
