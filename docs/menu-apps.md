@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Navbar
-nav_order: 14
+title: Menu Apps
+nav_order: 16
 description: ""
-permalink: navbar/
+permalink: menu-apps/
 ---
-# Navbar
+# Menu Apps
 {: .no_toc }
 
-O `m-navbar` é o componente de navegação horizontal do Macaw.
+O `m-menu-apps` é o componente de menu de aplicativos do Macaw.
 
 ## Exemplo
 <style>
@@ -95,15 +95,14 @@ HTML
 
 ## Propriedades
 
-| Property        | Attribute         Description                | Type      | Default     |
-|-----------------|-----------------|----------------------------|-----------|-------------|
-| `active`        | `active`        | Se o item está ativo       | `boolean` | `undefined` |
-| `navItems`      | --              | Items da navbar            | `[]`      | `undefined` |
-| `selectedIndex` | `selectedIndex` | Índice do item selecionado | `number`  | `0`         |
+| Property        | Attribute         | Description              | Type     | Default     |
+| --------------- | ----------------- | ------------------------ | -------- | ----------- |
+| `label`         | `label`           | Menu label               | `string` | `undefined` |
+| `menuItemsJson` | `menu-items-json` | Menu Item items data.    | `string` | `undefined` |
+| `type`          | `type`            | Menu type (grid or list) | `string` | `'grid'`    |
 
-
-## Dependências
 
 ### Depende de
 
-- [m-navbar-item](/navbar-item)
+- [m-menu-apps-item](../m-menu-apps-item)
+- [m-dropdown](../m-dropdown)

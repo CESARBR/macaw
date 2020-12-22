@@ -8,11 +8,11 @@ This is a magic avatar or not ;)
 
 ## Properties
 
-| Property        | Attribute            | Description                   | Type     | Default     |
-| --------------- | -------------------- | ----------------------------- | -------- | ----------- |
-| `label`         | `label`              | Menu label                    | `string` | `undefined` |
-| `menuItemsJSON` | `menu-items-j-s-o-n` | Menu Item items data.         | `string` | `undefined` |
-| `type`          | `type`               | Menu label Default type: grid | `string` | `undefined` |
+| Property        | Attribute         | Description              | Type     | Default     |
+| --------------- | ----------------- | ------------------------ | -------- | ----------- |
+| `label`         | `label`           | Menu label               | `string` | `undefined` |
+| `menuItemsJson` | `menu-items-json` | Menu Item items data.    | `string` | `undefined` |
+| `type`          | `type`            | Menu type (grid or list) | `string` | `'grid'`    |
 
 
 ## Dependencies

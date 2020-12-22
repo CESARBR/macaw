@@ -14,10 +14,9 @@ export class MenuApps {
   @Prop() label: string;
 
   /**
-   * Menu label
-   * Default type: grid
+   * Menu type (grid or list)
    */
-  @Prop() type: string;
+  @Prop() type: string = 'grid';
 
   /**
   * State of menu (opened or closed)
@@ -27,10 +26,10 @@ export class MenuApps {
   /**
    * Menu Item items data.
    */
-  @Prop() menuItemsJSON: string;
+  @Prop() menuItemsJson: string;
 
   render() {
-    let menuData = this.menuItemsJSON ? JSON.parse(this.menuItemsJSON) : '',
+    let menuData = this.menuItemsJson ? JSON.parse(this.menuItemsJson) : '',
         mostUsedItems, commonItems, partnersItems;
 
     if(menuData) {
@@ -54,7 +53,7 @@ export class MenuApps {
     }
 
     return (
-      <div class={this.type === 'grid' || this.type === undefined ? 'm-menu-apps m-menu-apps-grid' : this.type === 'list' ? 'm-menu-apps m-menu-apps-list' : null}>
+      <div class={this.type === 'grid' ? 'm-menu-apps m-menu-apps-grid' : 'm-menu-apps m-menu-apps-list'}>
         <m-dropdown type="text" label={this.label} show-label="false" icon="menu-apps-icon" icon-type="core" show-chevron="false">
           {mostUsedItems ? mostUsedItems : null}
           {mostUsedItems ? <hr /> : null}
