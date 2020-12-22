@@ -7,7 +7,7 @@
 To start development:
 
 ```bash
-git clone git@gitlab.com:cesarbr/cesar-apps/macaw/macaw.git
+git clone git@github.com:CESARBR/macaw.git
 cd macaw
 ```
 
@@ -41,7 +41,11 @@ When creating new component tags, we recommend using prefix `m-`. For example `m
 
 ### Script tag
 
-1. Put a script tag `<script src='https://unpkg.com/@cesarbr/macaw/dist/macaw.js'></script>` in the head of your index.html
+1. Put the following script tags in the head of your index.html 
+```html
+<script type="module" src="https://unpkg.com/@cesarbr/macaw/dist/macaw/macaw.esm.js"></script>
+<script nomodule src="https://unpkg.com/@cesarbr/macaw/dist/macaw/macaw.js"></script>
+```
 2. Then you can use the element anywhere in your template, JSX, html etc
 
 ### NPM
