@@ -1,0 +1,102 @@
+// Macaw - Menu Apps Item
+m-menu-apps-item {
+  margin-top: 8px;
+  display: block;
+
+  &:last-child {
+    .m-menu-apps-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  &:hover {
+    .m-menu-apps-item {
+      background: $ice;
+    }
+  }
+
+  .m-menu-apps-item {
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  a {
+    color: $gray;
+    text-decoration: none;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+
+    span {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .m-menu-apps-grid .m-dropdown__content .list-items & {
+    margin-right: $gridItemMarginRight;
+    margin-bottom: 8px;
+    height: 98px;
+
+    .m-menu-apps-item {
+      text-align: center;
+      width: $gridItemWidth;
+    }
+
+    a {
+      display: inline-block;
+    }
+
+    figure {
+      span {
+        margin: 0 auto;
+        width: 56px;
+        height: 56px;
+      }
+
+      figcaption {
+        font-size: .625rem;
+        max-width: $gridItemWidth - 20;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &:nth-of-type(#{$gridItemsPerRow}n) {
+      margin-right: 0;
+    }
+
+    &:hover figure figcaption {
+      white-space: normal; 
+      overflow: visible;
+      text-overflow: unset;
+    }
+  }
+
+  .m-menu-apps-list .m-dropdown__content .list-items & {
+    figure {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 8px;
+        width: 32px;
+        height: 32px;
+      }
+
+      figcaption {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}

@@ -18,11 +18,13 @@ This is a magic avatar or not ;)
 
 ### Used by
 
+ - [m-dropdown](../m-dropdown)
  - [m-header](../m-header)
 
 ### Graph
 ```mermaid
 graph TD;
+  m-dropdown --> m-avatar
   m-header --> m-avatar
   style m-avatar fill:#f9f,stroke:#333,stroke-width:4px
 ```

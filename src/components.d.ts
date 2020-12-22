@@ -40,13 +40,29 @@ export namespace Components {
          */
         "avatarSource": string;
         /**
+          * Unique ID.
+         */
+        "dropdownButtonID": string;
+        /**
+          * Icon to display
+         */
+        "icon": string;
+        /**
+          * Icon type to display
+         */
+        "iconType": string;
+        /**
           * Dropdown label
          */
         "label": string;
         /**
-          * Weither to display the chevron icon or not
+          * Whether to display the chevron icon or not
          */
         "showChevron": boolean;
+        /**
+          * Whether to display the button label or not. In case of using image or icon it's still need to provide a button label for accessibility reasons.
+         */
+        "showLabel": boolean;
         /**
           * Dropdown button type. "text" or "primary"
          */
@@ -87,6 +103,38 @@ export namespace Components {
           * The icon style: regular, bold and filled
          */
         "type": string;
+    }
+    interface MMenuApps {
+        /**
+          * Menu label
+         */
+        "label": string;
+        /**
+          * Menu Item items data.
+         */
+        "menuItemsJson": string;
+        /**
+          * Menu type (grid or list)
+         */
+        "type": string;
+    }
+    interface MMenuAppsItem {
+        /**
+          * Menu item image alternate description
+         */
+        "imgAlt": string;
+        /**
+          * Menu item image source
+         */
+        "imgSrc": string;
+        /**
+          * Menu item caption
+         */
+        "itemName": string;
+        /**
+          * Menu item link
+         */
+        "link": string;
     }
     interface MNavbar {
         /**
@@ -204,6 +252,18 @@ declare global {
         prototype: HTMLMIconElement;
         new (): HTMLMIconElement;
     };
+    interface HTMLMMenuAppsElement extends Components.MMenuApps, HTMLStencilElement {
+    }
+    var HTMLMMenuAppsElement: {
+        prototype: HTMLMMenuAppsElement;
+        new (): HTMLMMenuAppsElement;
+    };
+    interface HTMLMMenuAppsItemElement extends Components.MMenuAppsItem, HTMLStencilElement {
+    }
+    var HTMLMMenuAppsItemElement: {
+        prototype: HTMLMMenuAppsItemElement;
+        new (): HTMLMMenuAppsItemElement;
+    };
     interface HTMLMNavbarElement extends Components.MNavbar, HTMLStencilElement {
     }
     var HTMLMNavbarElement: {
@@ -248,6 +308,8 @@ declare global {
         "m-footer": HTMLMFooterElement;
         "m-header": HTMLMHeaderElement;
         "m-icon": HTMLMIconElement;
+        "m-menu-apps": HTMLMMenuAppsElement;
+        "m-menu-apps-item": HTMLMMenuAppsItemElement;
         "m-navbar": HTMLMNavbarElement;
         "m-navbar-item": HTMLMNavbarItemElement;
         "m-table": HTMLMTableElement;
@@ -287,13 +349,29 @@ declare namespace LocalJSX {
          */
         "avatarSource"?: string;
         /**
+          * Unique ID.
+         */
+        "dropdownButtonID"?: string;
+        /**
+          * Icon to display
+         */
+        "icon"?: string;
+        /**
+          * Icon type to display
+         */
+        "iconType"?: string;
+        /**
           * Dropdown label
          */
         "label"?: string;
         /**
-          * Weither to display the chevron icon or not
+          * Whether to display the chevron icon or not
          */
         "showChevron"?: boolean;
+        /**
+          * Whether to display the button label or not. In case of using image or icon it's still need to provide a button label for accessibility reasons.
+         */
+        "showLabel"?: boolean;
         /**
           * Dropdown button type. "text" or "primary"
          */
@@ -334,6 +412,38 @@ declare namespace LocalJSX {
           * The icon style: regular, bold and filled
          */
         "type"?: string;
+    }
+    interface MMenuApps {
+        /**
+          * Menu label
+         */
+        "label"?: string;
+        /**
+          * Menu Item items data.
+         */
+        "menuItemsJson"?: string;
+        /**
+          * Menu type (grid or list)
+         */
+        "type"?: string;
+    }
+    interface MMenuAppsItem {
+        /**
+          * Menu item image alternate description
+         */
+        "imgAlt"?: string;
+        /**
+          * Menu item image source
+         */
+        "imgSrc"?: string;
+        /**
+          * Menu item caption
+         */
+        "itemName"?: string;
+        /**
+          * Menu item link
+         */
+        "link"?: string;
     }
     interface MNavbar {
         /**
@@ -415,6 +525,8 @@ declare namespace LocalJSX {
         "m-footer": MFooter;
         "m-header": MHeader;
         "m-icon": MIcon;
+        "m-menu-apps": MMenuApps;
+        "m-menu-apps-item": MMenuAppsItem;
         "m-navbar": MNavbar;
         "m-navbar-item": MNavbarItem;
         "m-table": MTable;
@@ -434,6 +546,8 @@ declare module "@stencil/core" {
             "m-footer": LocalJSX.MFooter & JSXBase.HTMLAttributes<HTMLMFooterElement>;
             "m-header": LocalJSX.MHeader & JSXBase.HTMLAttributes<HTMLMHeaderElement>;
             "m-icon": LocalJSX.MIcon & JSXBase.HTMLAttributes<HTMLMIconElement>;
+            "m-menu-apps": LocalJSX.MMenuApps & JSXBase.HTMLAttributes<HTMLMMenuAppsElement>;
+            "m-menu-apps-item": LocalJSX.MMenuAppsItem & JSXBase.HTMLAttributes<HTMLMMenuAppsItemElement>;
             "m-navbar": LocalJSX.MNavbar & JSXBase.HTMLAttributes<HTMLMNavbarElement>;
             "m-navbar-item": LocalJSX.MNavbarItem & JSXBase.HTMLAttributes<HTMLMNavbarItemElement>;
             "m-table": LocalJSX.MTable & JSXBase.HTMLAttributes<HTMLMTableElement>;

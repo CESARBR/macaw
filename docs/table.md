@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Table
-nav_order: 9
+nav_order: 15
 description: ""
 permalink: table/
 ---

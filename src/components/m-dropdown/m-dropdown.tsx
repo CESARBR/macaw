@@ -1,4 +1,6 @@
 import { Component, Prop, State, h } from '@stencil/core';
+import { setUniqueID } from '../../utils/utils';
+import { ClickOutside } from 'stencil-click-outside';
 
 @Component({
   tag: 'm-dropdown',
@@ -13,9 +15,19 @@ export class Dropdown {
   @Prop() avatarSource: string;
 
   /**
-   * Weither to display the chevron icon or not
+   * Whether to display the chevron icon or not
    */
   @Prop({ mutable: true }) showChevron: boolean = true;
+
+  /**
+   * Icon to display
+   */
+  @Prop() icon: string;
+
+  /**
+   * Icon type to display
+   */
+  @Prop() iconType: string;
 
   /**
    * Dropdown button type. "text" or "primary"
@@ -25,27 +37,50 @@ export class Dropdown {
   /**
    * Dropdown label
    */
-  @Prop({ attribute: 'label' }) label: string;
+  @Prop() label: string;
 
   /**
-   * Weither if the dropdown is open or not
+   * Whether to display the button label or not. In case of using image or icon
+   * it's still need to provide a button label for accessibility reasons.
    */
-  @State() open: boolean;
+  @Prop({ mutable: true }) showLabel: boolean = true;
 
+  /**
+   * Whether the dropdown is open or not
+   */
+  @State() open: boolean = false;
+
+  /**
+   * Set open attribute value to control menu display
+   */
   handleClick() {
     this.open = !this.open;
   }
 
+  /**
+   * Close menu when click outside
+   */
+  @ClickOutside()
+  closeMenuIfClickOutside() {
+    this.open = false;
+  }
+
+  /**
+   * Unique ID.
+   */
+  @Prop() dropdownButtonID: string = 'mID-' + setUniqueID();
+
   render() {
     return (
-      <div class="m-dropdown">
-        <m-button type={this.type} onClick={() => this.handleClick()}>
-          {this.avatarSource ? <m-avatar source={this.avatarSource} ></m-avatar> : ""}
-          {this.label} 
-          {this.showChevron ?  <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : ""}
+      <div class="m-dropdown" role="menu">
+        <m-button type={this.type} onClick={() => this.handleClick()} id={this.dropdownButtonID} aria-expanded={this.open ? 'true' : 'false'}>
+          {this.avatarSource ? <m-avatar source={this.avatarSource} ></m-avatar> : ''}
+          <span class={!this.showLabel ? 'm-dropdown__invisible-label' : null}>{!this.label ? 'Menu Dropdown' : this.label}</span>
+          {this.icon ? <m-icon type={this.iconType} name={this.icon} /> : null}
+          {this.showChevron ? <m-icon name="chevron-bottom" class={'icon ' + (this.open ? '' : 'icon--closed')} /> : null}
         </m-button>
         <div class={'m-dropdown__content ' + (this.open ? 'm-dropdown__content--show' : '')}>
-          <ul class="list-items" onClick={() => this.handleClick()}>
+          <ul class="list-items" onClick={() => this.handleClick()} role="menu" aria-labelledby={this.dropdownButtonID}>
             <slot/>
           </ul>
         </div>

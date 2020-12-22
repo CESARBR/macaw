@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Typography
-nav_order: 12
+title: Fontes
+nav_order: 3
 description: ""
-permalink: typography/
+permalink: fontes/
 ---
 
-# Typography
+# Fontes
 
 ## Escala de fonte
 

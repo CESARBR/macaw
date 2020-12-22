@@ -16,7 +16,7 @@ export class Navbar {
   /** 
    * Index of selected Navbar item.
    */
-  @Prop({ attribute: 'selected-index' }) selectedIndex: number = 0;
+  @Prop() selectedIndex: number = 0;
 
   /** 
    * Whether item is active.

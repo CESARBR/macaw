@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Navbar
-nav_order: 14
+nav_order: 13
 description: ""
 permalink: navbar/
 ---
@@ -12,24 +12,25 @@ O `m-navbar` é o componente de navegação horizontal do Macaw.
 
 ## Exemplo
 <style>
-    .page-content .m-navbar__list {
-        padding: 0;
-    }
-    .page-content .m-navbar__list .m-navbar__list-item,
-    .page-content .m-navbar__list .m-navbar__list-item--active {
-        margin: 0;
-    }
-    .page-content .m-navbar__list .m-navbar__list-item a,
-    .page-content .m-navbar__list .m-navbar__list-item--active a {
-        background-image: none;
-        overflow: unset;
-        text-overflow: unset;
-        white-space: unset;
-        background-repeat: unset;
-        background-position: unset;
-        background-size: unset;
-    }
+  .page-content .m-navbar__list {
+      padding: 0;
+  }
+  .page-content .m-navbar__list .m-navbar__list-item,
+  .page-content .m-navbar__list .m-navbar__list-item--active {
+      margin: 0;
+  }
+  .page-content .m-navbar__list .m-navbar__list-item a,
+  .page-content .m-navbar__list .m-navbar__list-item--active a {
+      background-image: none;
+      overflow: unset;
+      text-overflow: unset;
+      white-space: unset;
+      background-repeat: unset;
+      background-position: unset;
+      background-size: unset;
+  }
 </style>
+
 <m-navbar></m-navbar>
 
 <m-navbar>
@@ -68,7 +69,8 @@ JavaScript
 const myNavbar = document.querySelector('m-navbar');
 // Passe um array de itens HTML para a propriedade pública navItems.
 myNavbar.navItems = ['<a href="index.html">Link 1</a>', '<a href="index.html">Link 2</a>','<a href="index.html">Link 3</a>', '<a href="index.html">Link 4</a>'];
-myNavbar.selected-index = 4;
+// Defina o índice do item selecionado inicialmente.
+myNavbar.selectedIndex = 4;
 ```
 
 ### 2. Declarativa
@@ -95,11 +97,11 @@ HTML
 
 ## Propriedades
 
-| Property        | Attribute        | Description                | Type      | Default     |
-|-----------------|------------------|----------------------------|-----------|-------------|
-| `active`        | `active`         | Se o item está ativo       | `boolean` | `undefined` |
-| `navItems`      | --               | Items da navbar            | `[]`      | `undefined` |
-| `selectedIndex` | `selected-index` | Índice do item selecionado | `number`  | `0`         |
+| Property        | Attribute         Description                | Type      | Default     |
+|-----------------|-----------------|----------------------------|-----------|-------------|
+| `active`        | `active`        | Se o item está ativo       | `boolean` | `undefined` |
+| `navItems`      | --              | Items da navbar            | `[]`      | `undefined` |
+| `selectedIndex` | `selectedIndex` | Índice do item selecionado | `number`  | `0`         |
 
 
 ## Dependências
