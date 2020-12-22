@@ -261,7 +261,7 @@ HTML
 JavaScript
 ```javascript
 // Atribua o elemento DOM do componente m-manu-apps a uma constante, usando o atributo id
-const myNavbar = document.getElementById('menu-items');
+const myMenuApps = document.getElementById('menu-items');
 // Passe uma string no formato JSON com os itens do Menu Apps para a propriedade pública menuItemsJson.
 myMenuApps.menuItemsJson = '{"mostUsed":[{"link":"http://","imgSrc":"https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png","imgAlt":"Marca CESAR","itemContent":"Intranet"},{"link":"http://","imgSrc":"https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png","imgAlt":"Marca CESAR","itemContent":"Portal do Colaborador"},{"link":"http://","imgSrc":"https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png","imgAlt":"Marca CESAR","itemContent":"SAI"},{"link":"http://","imgSrc":"https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png","imgAlt":"Marca CESAR","itemContent":"HELP"}],...
 ```
@@ -319,23 +319,36 @@ A string JSON fornecida deve gerar a seguinte estrutura de objeto literal JavaSc
 ### 2. Declarativa
 HTML
 ```html
-<m-navbar>
-  <m-navbar-item active=true>
-    <a href="index.html">Link 1</a>
-  </m-navbar-item>
-  <m-navbar-item>
-    <a href="index.html">Link 2</a>
-  </m-navbar-item>
-  <m-navbar-item>
-    <a href="index.html">Link 3</a>
-  </m-navbar-item>
-  <m-navbar-item>
-    <a href="index.html">Link 4</a>
-  </m-navbar-item>
-  <m-navbar-item>
-    <a href="index.html">Link 5</a>
-  </m-navbar-item>
-</m-navbar>
+<m-menu-apps label="Menu de Aplicativos - Lista" type="list">
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Intranet</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Portal do Colaborador</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">SAI</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">HELP</m-menu-apps-item>
+  <hr>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Auxílio ao Idioma</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Baias</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Bens</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Biblioteca CESAR School</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">CODI</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">GIN</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Indique um Amigo</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Mapeamento de Competências</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Metas</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Papeleta de Viagem</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Punch Monitor</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">PrestContas</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Rateio</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Recrutador</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Solicitação de Evento</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Apps</m-menu-apps-item>
+  <h3>Sistemas Parceiros</h3>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">CRM</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Desko</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">HELP</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Portal do Colaborador</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Qulture Rocks</m-menu-apps-item>
+  <m-menu-apps-item link="http://" img-src="https://www.cesar.org.br/wp-content/uploads/2017/06/logo-md.png" img-alt="Marca CESAR">Qlik Sense</m-menu-apps-item>
+</m-menu-apps>
 ```
 
 ## Propriedades
