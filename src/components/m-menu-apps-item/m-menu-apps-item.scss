@@ -25,6 +25,11 @@ m-menu-apps-item {
     text-decoration: none;
     margin: 10px;
     display: inline-block;
+    background: none;
+
+    &:hover {
+      background: none;
+    }
   }
 
   figure {
