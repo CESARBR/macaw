@@ -16,7 +16,7 @@
 | `label`            | `label`               | Dropdown label                                                                                                                                  | `string`  | `undefined`              |
 | `showChevron`      | `show-chevron`        | Whether to display the chevron icon or not                                                                                                      | `boolean` | `true`                   |
 | `showLabel`        | `show-label`          | Whether to display the button label or not. In case of using image or icon it's still need to provide a button label for accessibility reasons. | `boolean` | `true`                   |
-| `type`             | `type`                | Dropdown button type. "text" or "primary"                                                                                                       | `string`  | `'primary'`              |
+| `type`             | `type`                | Dropdown button type: `text` or `primary`                                                                                                       | `string`  | `'primary'`              |
 
 
 ## Dependencies
