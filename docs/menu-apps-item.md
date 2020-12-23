@@ -13,12 +13,12 @@ O `m-menu-apps-item` é um componente de uso interno do `m-menu-apps` que trata 
 
 ## Propriedades
 
-| Property   | Attribute   | Description                           | Type     | Default     |
-| ---------- | ----------- | ------------------------------------- | -------- | ----------- |
-| `imgAlt`   | `img-alt`   | Menu item image alternate description | `string` | `undefined` |
-| `imgSrc`   | `img-src`   | Menu item image source                | `string` | `undefined` |
-| `itemName` | `item-name` | Menu item caption                     | `string` | `undefined` |
-| `link`     | `link`      | Menu item link                        | `string` | `undefined` |
+| Propriedades   | Atributo    | Descrição                                    | Tipo     | Padrão      |
+| -------------- | ----------- | -------------------------------------------- | -------- | ----------- |
+| `imgAlt`       | `img-alt`   | Descrição alternativa da imagem do Menu item | `string` | `undefined` |
+| `imgSrc`       | `img-src`   | URL da imagem do Menu item                   | `string` | `undefined` |
+| `itemName`     | `item-name` | Legenda do Menu Item                         | `string` | `undefined` |
+| `link`         | `link`      | Link do Menu item                            | `string` | `undefined` |
 
 
 ## Dependências

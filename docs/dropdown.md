@@ -35,9 +35,16 @@ O `m-dropdown` é o menu dropdown acompanhado por um `m-button`.
 
 ## Propriedades
 
-| Property | Attribute | Description             | Type     | Default     |
-| -------- | --------- | ----------------------- | -------- | ----------- |
-| `label`  | `label`   | Label do botão dropdown | `string` | `undefined` |
+| Propriedade           | Atributo             | Descrição                                                                                                                                    | Tipo      | Padrão                  |
+| ------------------ | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------ |
+| `avatarSource`     | `avatar-source`       | URL da imagem do avatar ou o nome do usuário.                                                                                                | `string`  | `undefined`              |
+| `dropdownButtonID` | `dropdown-button-i-d` | ID Unique.                                                                                                                                      | `string`  | `'mID-' + setUniqueID()` |
+| `icon`             | `icon`                | Ícone a ser exibido no botão                                                                                                                                 | `string`  | `undefined`              |
+| `iconType`         | `icon-type`           | Tipo do Ícone ser exibido no botão                                                                                                                          | `string`  | `undefined`              |
+| `label`            | `label`               | Etiqueta do dropdown                                                                                                                                  | `string`  | `undefined`              |
+| `showChevron`      | `show-chevron`        | Se o ïcone de Chevron deve ser exibido                                                                                                      | `boolean` | `true`                   |
+| `showLabel`        | `show-label`          | Se a etiqueta do botão deve ser exibida. Caso seja usada uma imagem ou ícone é necessário fornecer o nome do botão, por motivos de acessibilidade | `boolean` | `true`                   |
+| `type`             | `type`                | Tipo do botão do Dropdown.                                                                                                       | `string`  | `'primary'`              |
 
 
 ## Dependências
