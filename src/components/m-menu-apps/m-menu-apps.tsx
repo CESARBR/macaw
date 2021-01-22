@@ -49,29 +49,31 @@ export class MenuApps {
         return (isStringValid(value) && /^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value));
       }
 
-      function menuItemIsCorrect(menuItem: any) {
-        return (menuItem.includes('link') && 
-                  validateUrl(menuItem.link) && 
-                  menuItem.includes('imgSrc') && 
-                  validateUrl(menuItem.imgSrc) && 
-                  menuItem.includes('imgAlt') && 
-                  isStringValid(menuItem.imgAlt) && 
-                  menuItem.includes('itemContent') && 
-                  isStringValid(menuItem.itemContent)
-                );
+      function menuItemIsComplete(menuItem: any) {
+        let AttributeNames = Object.keys(menuItem);
+
+        return (AttributeNames.includes('link') && 
+                validateUrl(menuItem.link) && 
+                AttributeNames.includes('imgSrc') && 
+                validateUrl(menuItem.imgSrc) && 
+                AttributeNames.includes('imgAlt') && 
+                isStringValid(menuItem.imgAlt) && 
+                AttributeNames.includes('itemContent') && 
+                isStringValid(menuItem.itemContent)
+              );
       }
 
       function isMenuBlockValid(menuBlock: any) {
         if(!(isArray(menuBlock))) {
           throw 'Dados do componente Menu Apps com estrutura incorreta: "' + menuBlock + '" deve ser um array.';
         } else {
-          for(let menuItem of menuData.mostUsed) {
-            if(!(isObject(menuItem.constructor))) {
+          for(let menuItem of menuBlock) {
+            if(!(isObject(menuItem))) {
               throw 'Dados do componente Menu Apps com estrutura incorreta: cada item do menu deve ser um objeto literal.';;
             } else {
               if(Object.keys(menuItem).length === 0) {
                 throw 'Dados do componente Menu Apps com estrutura incorreta: um item do menu não possui dados.';
-              } else if(!(menuItemIsCorrect(menuItem))) {
+              } else if(!(menuItemIsComplete(menuItem))) {
                 throw 'Dados do componente Menu Apps com estrutura incorreta: o item do menu não possui todos dados necessários.';
               }
             }
