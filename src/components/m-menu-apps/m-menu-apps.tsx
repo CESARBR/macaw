@@ -63,7 +63,7 @@ export class MenuApps {
               );
       }
 
-      function isMenuBlockValid(menuBlock: any) {
+      function checkMenuBlock(menuBlock: any) {
         if(!(isArray(menuBlock))) {
           throw 'Dados do componente Menu Apps com estrutura incorreta: "' + menuBlock + '" deve ser um array.';
         } else {
@@ -81,38 +81,30 @@ export class MenuApps {
         }
       }
 
-      function checkMenuItemsJson() {
+      function checkMenu() {
+        let menuBlockNames: Array<string>;
+
         if(!(isObject(menuData))) {
           throw 'Dados do componente Menu Apps com estrutura incorreta: "menuData" deve ser um objeto literal.';
         } else if(Object.keys(menuData).length === 0) {
           throw 'Dados do componente Menu Apps com estrutura incorreta: o objeto "menuData" está vazio.';
         } else {
-          if(menuData.mostUsed) {
-            try {
-              isMenuBlockValid(menuData.mostUsed)
-            } catch (e) {
-              throw e;
-            }
-          }
-          if(menuData.common) {
-            try {
-              isMenuBlockValid(menuData.common)
-            } catch (e) {
-              throw e;
-            }
-          } 
-          if(menuData.partners) {
-            try {
-              isMenuBlockValid(menuData.partners)
-            } catch (e) {
-              throw e;
+          menuBlockNames = Object.keys(menuData);
+          
+          if(menuBlockNames.includes('mostUsed') || menuBlockNames.includes('common') || menuBlockNames.includes('partners')) {
+            for(let menuBlockName in menuData) {
+              try {
+                checkMenuBlock(menuData[menuBlockName])
+              } catch (e) {
+                throw e;
+              }
             }
           }
         }
       }
 
       try {
-        checkMenuItemsJson();
+        checkMenu();
       }
       catch (e) {
         console.error('Verifique o formato do objeto de dados do menu apps. Para mais informações, consulte a ajuda do Macaw para o componente Menu Apps');
