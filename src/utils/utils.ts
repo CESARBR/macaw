@@ -27,6 +27,27 @@ export function validURL(str: string): boolean {
 /**
  * Generates unique ID property from nanoid library.
  */
-export function setUniqueID() {
+export function setUniqueID(): string {
   return nanoid();
+}
+
+/**
+ * Verify if argument passed is Object.
+ */
+export function isObject(objectItem: any): boolean {
+  return objectItem.constructor === Object;
+}
+
+/**
+ * Verify if argument passed is Array.
+ */
+export function isArray(arrayItem: any): boolean {
+  return arrayItem instanceof Array;
+}
+
+/**
+ * Verify if argument passed is String and contains value.
+ */
+export function isStringAndNotEmpty(stringValue: any): boolean {
+  return (typeof stringValue === 'string' && stringValue !== '');
 }
